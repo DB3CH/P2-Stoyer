@@ -1,1 +1,11 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Støyer</title>
+	<meta charset="utf-8">
+	
+</head>
+<body>
+
+</body>
+</html>
