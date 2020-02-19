@@ -1,2 +1,2 @@
-# P2 Stoyer
+# P2 Stroyer
  Hjemmeside og webshop til Stroyer 
