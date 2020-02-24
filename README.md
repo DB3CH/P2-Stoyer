@@ -1,2 +1,2 @@
 # P2 Stroyer
- Hjemmeside og webshop til Stroyer 
+ P2 projekt - konstruktion af en hjemmeside til tøjbutikken støyer
