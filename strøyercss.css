@@ -1,0 +1,19 @@
+.navigationsbar{
+    list-style-type: none;
+    display: block;
+    height: 20px;
+    width: 60px;
+    background-color: grey;
+    padding: 5px;
+    margin: 0px 2px 0px 2px;
+    float: left;
+    border-radius: 2px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+
