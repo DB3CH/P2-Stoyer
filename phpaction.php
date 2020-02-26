@@ -15,9 +15,9 @@ if (mysqli_query($connection, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
+header("location: show.php");
 
 
 
-
-mysqli_close($conn);
+mysqli_close($connection);
 ?>
