@@ -11,7 +11,6 @@ VALUES ('$navn', '$efternavn')";
 
 if (mysqli_query($connection, $sql)) {
     echo "New record created successfully";
-    Sleep(5);
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
