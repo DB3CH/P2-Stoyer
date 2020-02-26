@@ -1,12 +1,13 @@
 <?php
+// Indsæt loginoplysninger til databasen i variabler.
 $servername = "localhost";
 $username = "admin1";
 $password = "admin1";
 $dbname = "test";
 
-// Create connection
+// Etablerer forbindelsen.
 $connection = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
+// chekker forbindelsen.
 if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
