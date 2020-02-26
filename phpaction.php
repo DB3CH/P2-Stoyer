@@ -1,15 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "admin1";
-$password = "admin1";
-$dbname = "test";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require_once "connection.php";
 
 
   $navn = htmlentities($_POST['navn']);
@@ -19,7 +9,7 @@ if (!$conn) {
 $sql = "INSERT INTO testtable (navn, efternavn)
 VALUES ('$navn', '$efternavn')";
 
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($connection, $sql)) {
     echo "New record created successfully";
     Sleep(5);
 } else {

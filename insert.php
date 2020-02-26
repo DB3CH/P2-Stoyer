@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insert Test </title>
+	<title>Insert  </title>
 	<meta charset="utf-8">
 </head>
 
