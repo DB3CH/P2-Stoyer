@@ -47,7 +47,8 @@ if(!$results){
       ?>
       <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger</a></td>
       <td><a href="delete.php?id=<?php echo $row['ID']?>">Slet</a></td>
-   <?php       
+   <?php    
+      
   }
   ?>
 </table>
