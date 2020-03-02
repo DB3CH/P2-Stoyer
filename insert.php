@@ -20,7 +20,8 @@
         <input type="number" min="0.00" max="999999.00" step="1.00" id="pris" name="pris">   
 
         <input type="submit" value="Indsæt">
+        
     </form>
-    
+
 </body>
 </html>
