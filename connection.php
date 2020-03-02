@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "admin1";
 $password = "admin1";
-$dbname = "test";
+$dbname = "stroyer";
 
 // Etablerer forbindelsen.
 $connection = mysqli_connect($servername, $username, $password, $dbname);

@@ -8,10 +8,17 @@
 <body>
 <!-- Form hvor data kan indsættes, videre til phpaction, hvor det bliver sat på databasen. -->
 	<form action="phpaction.php" method="POST">
-        <label>Navn:</label>
-        <input type="text" id="navn" name="navn">
-        <Lable>Efternavn:</Lable>
-        <input type="text" id="efternavn" name="efternavn"> 
+        <label>Kategori:</label>
+        <input type="text" id="kategori" name="kategori">
+        <Lable>Producent:</Lable>
+        <input type="text" id="producent" name="producent"> 
+        <Lable>Model:</Lable>
+        <input type="text" id="model" name="model">
+        <Lable>Beskrivelse:</Lable>
+        <input type="text" id="beskrivelse" name="beskrivelse">
+        <Lable>Pris:</Lable>
+        <input type="number" min="0.00" max="999999.00" step="1.00" id="pris" name="pris">   
+
         <input type="submit" value="Indsæt">
     </form>
 </body>
