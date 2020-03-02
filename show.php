@@ -1,7 +1,7 @@
 <?php
  require_once 'connection.php';
 
-$query = "SELECT kategori,producent,model,pris,beskrivelse FROM produkttest";
+$query = "SELECT ID,kategori,producent,model,pris,beskrivelse FROM produkttest";
 $results = mysqli_query($connection,$query);
 
 if(!$results){
@@ -26,17 +26,17 @@ echo "<ul>";
 while($row = mysqli_fetch_assoc($results)){
   
   echo '<li>';
-    echo  $row['kategori']."<br>";
+    echo  $row['kategori']. "<br>";
     
  
     
-      echo  $row['producent']."<br>";
+      echo   $row['producent']."<br>";
 
-       echo  $row['model']."<br>";
+       echo "Model: ". $row['model']."<br>";
 
-        echo  $row['pris']."<br>";
+        echo  "Pris: ". $row['pris']."<br>";
 
-         echo  $row['beskrivelse']."<br>";
+         echo  "Beskrivelse: ". $row['beskrivelse']."<br>";
       
 
       
