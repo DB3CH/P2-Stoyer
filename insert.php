@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<!-- Form hvor data kan indsættes, videre til phpaction, hvor det bliver sat på databasen. -->
+<!-- Form hvor data kan indsættes, post = videre til phpaction, hvor det bliver sat på databasen. -->
 	<form action="phpaction.php" method="POST">
         <label>Kategori:</label>
         <input type="text" id="kategori" name="kategori">
