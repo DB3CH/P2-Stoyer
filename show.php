@@ -10,7 +10,12 @@ if(!$results){
 
 
 ?>
+<style>
+  table, th, td{
+    border: 1px solid black;
+  }
 
+</style>
 
 <!DOCTYPE html>
 <html>
@@ -21,35 +26,35 @@ if(!$results){
 
 
 <h2>Produkt oversigt</h2>
-<ul>
-<?php 
-while($row = mysqli_fetch_assoc($results)){
-  
-  echo '<li>';
-  
-    echo "<h2>".$row['kategori']."</h2>"."<br>";
+<table>
+  <tr> 
+    <th>Katagori</th>
+    <th>Producent</th>
+    <th>Model</th>
+    <th>Pris</th>
+    <th>Beskrivelse</th>
+  </tr>
+  <?php 
+  while($row = mysqli_fetch_assoc($results)){
     
- 
+    echo '<tr>';
     
-      echo   $row['producent']."<br>";
-
-       echo "Model: ". $row['model']."<br>";
-
-        echo  "Pris: ". $row['pris']."<br>";
-
-         echo  "Beskrivelse: ". $row['beskrivelse']."<br>";
+      echo "<td>".$row['kategori']."</td>";
+      echo "<td>".$row['producent']."</td>";
+      echo "<td>".$row['model']."</td>";
+      echo "<td>". $row['pris']."</td>";
+      echo "<td>".$row['beskrivelse']."</td>";
+      ?>
+      <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger</a></td>
+      <td><a href="delete.php?id=<?php echo $row['ID']?>">Slet</a></td>
+   <?php    
       
-
-      
-    
-}
-?>
-</ul>
+  }
+  ?>
+</table>
 
 
 
 
-
-    </div>
 </body>
 </html>
