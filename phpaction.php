@@ -1,34 +1,26 @@
 <?php
-$servername = "localhost";
-$username = "admin1";
-$password = "admin1";
-$dbname = "test";
+// Etablerer forbindelse til serveren
+require_once "connection.php";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-
+//Tager informationen fra formen og sætter den i variabler, HTMLentities sørger for at det ikke er skrevet kode i formen. 
   $navn = htmlentities($_POST['navn']);
   $efternavn = htmlentities($_POST['efternavn']);
   
-
+//Sætter sql query til at indsætte data i en variabel
 $sql = "INSERT INTO testtable (navn, efternavn)
 VALUES ('$navn', '$efternavn')";
 
-if (mysqli_query($conn, $sql)) {
+//if staement viser om dataen er skrevet eller om der er en error
+if (mysqli_query($connection, $sql)) {
     echo "New record created successfully";
-    Sleep(5);
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
+//header sender brugeren videre til show.php 
+header("location: show.php");
 
 
-
-
-mysqli_close($conn);
+// lukker forbindelsen til serveren
+mysqli_close($connection);
 ?>
