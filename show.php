@@ -46,7 +46,8 @@ if(!$results){
       echo "<td>".$row['beskrivelse']."</td>";
       ?>
       <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger</a></td>
-      <td><a href="delete.php?id=<?php echo $row['ID']?>">Slet</a></td>
+      <td><a href="delete.php?id=<?php echo $row['ID']?>" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
+      >Slet</a></td>
    <?php    
       
   }
