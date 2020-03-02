@@ -17,7 +17,7 @@ VALUES ('$kategori', '$producent', '$model', '$pris', '$beskrivelse')";
 if (mysqli_query($connection, $sql)) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 }
 
 //header sender brugeren videre til show.php 
