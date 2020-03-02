@@ -26,7 +26,8 @@ if(!$results){
 while($row = mysqli_fetch_assoc($results)){
   
   echo '<li>';
-    echo  $row['kategori']."<br>";
+    echo "<h2>";
+    echo "<h2>".$row['kategori']."</h2>"."<br>";
     
  
     
