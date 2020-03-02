@@ -21,8 +21,8 @@ if(!$results){
 
 
 <h2>Produkt oversigt</h2>
+<ul>
 <?php 
-echo "<ul>";
 while($row = mysqli_fetch_assoc($results)){
   
   echo '<li>';
@@ -42,8 +42,8 @@ while($row = mysqli_fetch_assoc($results)){
       
     
 }
-echo "</ul>"; 
 ?>
+</ul>
 
 
 
