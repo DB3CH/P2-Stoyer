@@ -21,7 +21,7 @@ if (mysqli_query($connection, $sql)) {
 }
 
 //header sender brugeren videre til show.php 
-//header("location: show.php");
+header("location: show.php");
 
 
 // lukker forbindelsen til serveren
