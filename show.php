@@ -1,7 +1,7 @@
 <?php
- require_once 'databasetjek.php';
+ require_once 'connection.php';
 
-$query = "SELECT Maerke, Stoerelse, Billede,Model FROM Bukser";
+$query = "SELECT kategori,producent,model,pris,beskrivelse FROM produkttest";
 $results = mysqli_query($connection,$query);
 
 if(!$results){
@@ -16,11 +16,9 @@ if(!$results){
 <html>
 <head>
 <meta charset="utf-8">
-<link href="stroeyerstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-  <div class="brand-title"> <a href="forside.php">Strøyer</div> </a>
 
 <h2>Produkt oversigt</h2>
 <?php 
@@ -28,21 +26,21 @@ echo "<ul>";
 while($row = mysqli_fetch_assoc($results)){
   
   echo '<li>';
-    echo  $row['Model']."<br>";
-    ?>
+    echo  $row['kategori']."<br>";
+    
  
-    <?php
-      echo "<img src=". $row['Billede']." width='32' height='32'>";
-      ?>
+    
+      echo  $row['producent']."<br>";
 
-      <?php
-      echo  "<h5>".  "Størelse - " .$row['Stoerelse']."<br>". "Mærke - ". $row['Maerke']."</h5>";
-      ?>
+       echo  $row['model']."<br>";
+
+        echo  $row['pris']."<br>";
+
+         echo  $row['beskrivelse']."<br>";
       
 
-<?php
-    echo "</a>";
-  echo '</li>';
+      
+    
 }
 echo "</ul>"; 
 ?>
