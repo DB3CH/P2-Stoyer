@@ -1,4 +1,5 @@
 <?php
+// Etablerer forbindelse til serveren
  require_once 'connection.php';
 
 $query = "SELECT ID,kategori,producent,model,pris,beskrivelse FROM produkttest";
