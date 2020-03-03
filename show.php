@@ -11,6 +11,7 @@ if(!$results){
 
 
 ?>
+<!--CSS der laver gitter i vores tabel, skal flyttes til eksternt dokument -->
 <style>
   table, th, td{
     border: 1px solid black;
@@ -27,6 +28,7 @@ if(!$results){
 
 
 <h2>Produkt oversigt</h2>
+<!-- Table der indeholder alle produkter i databasen --> 
 <table>
   <tr> 
     <th>Katagori</th>
@@ -36,6 +38,7 @@ if(!$results){
     <th>Beskrivelse</th>
   </tr>
   <?php 
+  // While loop der kører igennem databasen og echoer de valgte resultater i en tabel
   while($row = mysqli_fetch_assoc($results)){
     
     echo '<tr>';
@@ -46,6 +49,7 @@ if(!$results){
       echo "<td>". $row['pris']."</td>";
       echo "<td>".$row['beskrivelse']."</td>";
       ?>
+      <!-- "rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
       <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger</a></td>
       <td><a href="delete.php?id=<?php echo $row['ID']?>" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
       >Slet</a></td>
@@ -60,3 +64,8 @@ if(!$results){
 
 </body>
 </html>
+
+<?php
+mysqli_close($connection);
+?>
+?>
