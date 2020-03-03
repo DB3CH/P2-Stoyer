@@ -68,4 +68,3 @@ if(!$results){
 <?php
 mysqli_close($connection);
 ?>
-?>
