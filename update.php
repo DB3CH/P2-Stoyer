@@ -8,17 +8,20 @@ require_once "connection.php";
   $model = htmlentities($_POST['model']);
   $beskrivelse = ($_POST['beskrivelse']);
   $pris = htmlentities($_POST['pris']);
-  $id = htmlentities($_post['id']);
+  $id = htmlentities($_POST['id']);
+
+
   
 //Sætter sql query til at indsætte data i en variabel
-$sql = "UPDATE produkttest SET katagori='$katagori', producent='$producent', model='$model', pris='$pris', beskrivelse='$beskrivelse' WHERE id='$id';";
+$sql = "UPDATE produkttest SET katagori='$katagori', producent='$producent', model='$model', pris='$pris', beskrivelse='$beskrivelse' 
+WHERE id='$id';";
 
-echo $sql;
-    $result = mysqli_query($connection,$sql);
-
-if(!$result){
-    die("could not query the databsse" .mysqli_error());
+if (mysqli_query($connection, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 }
+
 
 
 //header sender brugeren videre til show.php 
