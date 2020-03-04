@@ -26,23 +26,24 @@ if(!$results){
 </head>
 <body>
 
+<a href="insert.php">Indsæt</a>
 
 <h2>Produkt oversigt</h2>
-<!-- Table der indeholder alle produkter i databasen --> 
+<!-- Table der indeholder alle produkter i databasen -->
 <table>
-  <tr> 
+  <tr>
     <th>Katagori</th>
     <th>Producent</th>
     <th>Model</th>
     <th>Pris</th>
     <th>Beskrivelse</th>
   </tr>
-  <?php 
+  <?php
   // While loop der kører igennem databasen og echoer de valgte resultater i en tabel
   while($row = mysqli_fetch_assoc($results)){
-    
+
     echo '<tr>';
-    
+
       echo "<td>".$row['kategori']."</td>";
       echo "<td>".$row['producent']."</td>";
       echo "<td>".$row['model']."</td>";
@@ -53,8 +54,8 @@ if(!$results){
       <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger</a></td>
       <td><a href="delete.php?id=<?php echo $row['ID']?>" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
       >Slet</a></td>
-   <?php    
-      
+   <?php
+
   }
   ?>
 </table>
