@@ -62,7 +62,6 @@ if(!$results){
   ?>
 </table>
 
-hej
 
 
 
