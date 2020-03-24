@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html>
 <head>
@@ -9,29 +11,22 @@
 <body>
 
 
-<form name="tilfoej" id="tilfoejform" method="post" action="phptilfoejadmin.php" >
-	
-  <div>
-    <label for="uname">Admin navn</label>
-    <input type="text" name="uname" id="uname" required size="40" maxlength="60" placeholder="Vælg navn">
-  </div>
-  
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required size="40" maxlength="60" placeholder="Vælg kode">
-  </div>
-
+<form method="post" action="phptilfoejadmin.php" name="signup-form">
+    <div class="form-element">
+        <label>Username</label>
+        <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+    </div>
    
-    <input type="submit" id="addBtn" value="add">
-  </div>
-
+    <div class="form-element">
+        <label>Password</label>
+        <input type="text" name="kode" required />
+    </div>
+    <button type="submit" name="register" value="register">Register</button>
 </form>
 
 
-
-
 <footer>
-	<a href="homepage.html">back</a>
+	<a href="show.html">back</a>
 </footer>
 </body>
 </html>
