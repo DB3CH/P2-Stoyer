@@ -36,8 +36,6 @@ while($row = mysqli_fetch_assoc($result)){
 
     <form method='post' action='kurv.php'>
 
-
-
     <div class='producent'>".$row['producent']."</div>
 
     <div class='model'>".$row['model']."</div>
@@ -46,12 +44,15 @@ while($row = mysqli_fetch_assoc($result)){
 
 		<input type='hidden' name='id' value=".$row['id']." />
 
-    <button type='submit' class='buy'>Køb Nu</button>
     </form>
+
     </div>";
   }
 
 ?>
+<a href="kurv.php?id=<?php echo $id?>"> Tilføj til kurv </a>
+<br>
+<a href="viskurv.php">Se din kurv</a>
 <br>
 <a href="webshop.php">Tilbage</a>
 

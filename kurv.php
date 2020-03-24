@@ -1,16 +1,12 @@
 <?php
 session_start();
+$_SESSION ["indkøbskurv"] = array();
 require_once "connection.php";
-if (isset($_POST['id'])) {
-    $id = $_POST['id'];
 
-    $sql = "SELECT * FROM testtable WHERE id = $id"
+    $id = $_GET['id'];
 
-    $result = mysqli_query($sql)
+    array_push($_SESSION["indkøbskurv"], $id);
 
-    if ($result) {
-      $_sess
-    }
-}
+  header("location: webshop.php");
 
  ?>
