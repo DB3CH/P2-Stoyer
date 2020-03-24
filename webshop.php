@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Etablerer forbindelse til serveren
  require_once 'connection.php';
 
@@ -53,7 +54,7 @@ if(!$results){
       ?>
       <!-- "rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
       <td><a href="produktside.php?id=<?php echo $row['ID']?>">Se produkt</a></td>
-      
+
    <?php
 
   }
