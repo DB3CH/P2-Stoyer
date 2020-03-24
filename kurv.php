@@ -1,6 +1,9 @@
 <?php
 session_start();
-$_SESSION ["indkøbskurv"] = array();
+if (!isset($_SESSION["indkøbskurv"])) {
+	$_SESSION["indkøbskurv"] = array();
+}
+
 require_once "connection.php";
 
     $id = $_GET['id'];
