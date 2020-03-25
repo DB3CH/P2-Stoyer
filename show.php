@@ -1,17 +1,16 @@
 <?php
-// Initialize the session
-session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
+require_once "connection.php";
+
+// tjekker om man er logget in
+if(!isset($_SESSION['uname'])){
+    header('Location: login.php');
 }
+
+
 ?>
 
 <?php
 // Etablerer forbindelse til serveren
- require_once 'connection.php';
 
 $query = "SELECT*FROM produkttest ORDER BY pris ASC";
 $results = mysqli_query($connection,$query);
