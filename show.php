@@ -3,7 +3,7 @@ session_start();
 require_once "connection.php";
 
 // tjekker om man er logget in
-if(!isset($_SESSION['uname'])){
+if(!isset($_SESSION['login'])){
     header('Location: login.php');
 }
 

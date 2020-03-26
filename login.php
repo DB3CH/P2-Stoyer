@@ -19,7 +19,7 @@ if(isset($_POST['but_submit'])){
         $count = mysqli_num_rows($result);
 
         if($count > 0){
-            $_SESSION['uname'] = $uname;
+            $_SESSION['login'] = $uname;
             header('Location: show.php');
         }else{
             echo "Invalid username and password";
