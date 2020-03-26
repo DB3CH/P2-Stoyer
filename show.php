@@ -1,8 +1,9 @@
 <?php
+session_start();
 require_once "connection.php";
 
-// tjekker om man er logget in 
-if(!isset($_SESSION['uname'])){
+// tjekker om man er logget in
+if(!isset($_SESSION['login'])){
     header('Location: login.php');
 }
 
@@ -55,11 +56,11 @@ if(!$results){
   </tr>
 
 
-<?php  
+<?php
 
   // While loop der kører igennem databasen og echoer de valgte resultater i en tabel
   while($row = mysqli_fetch_assoc($results)){
-  
+
 
     echo '<tr>';
 
@@ -70,7 +71,7 @@ if(!$results){
       echo "<td>".$row['beskrivelse']."</td>";
       ?>
       <!-- "rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
-      <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette --> 
+      <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
       <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger</a></td>
       <td><a href="delete.php?id=<?php echo $row['ID']?>" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
       >Slet</a></td>
