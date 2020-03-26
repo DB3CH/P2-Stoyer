@@ -1,7 +1,7 @@
 <?php
 require_once "connection.php";
 
-// tjekker om man er logget in
+// tjekker om man er logget in 
 if(!isset($_SESSION['uname'])){
     header('Location: login.php');
 }

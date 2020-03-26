@@ -4,13 +4,18 @@ require_once "connection.php";
 
 if(isset($_POST['but_submit'])){
 
-    $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
-    $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
+ 
+    $uname = $_POST["username"];
+    $kode = $_POST["password"];
+ 
 
-    if ($uname != "" && $password != ""){
+    $uname = mysqli_real_escape_string($connection,$_POST['uname']);
+    $kode = mysqli_real_escape_string($connection,$_POST['pwd']);
 
-        $sql_query = "select count(*) as cntUser from users where username='".$uname."' and password='".$password."'";
-        $result = mysqli_query($con,$sql_query);
+    if ($uname != "" && $kode != ""){
+
+        $sql_query = ("SELECT * FROM users WHERE username='$uname' AND password='$kode'");
+        $result = mysqli_query($connection,$sql_query);
         $row = mysqli_fetch_array($result);
 
         $count = $row['cntUser'];
@@ -23,7 +28,6 @@ if(isset($_POST['but_submit'])){
         }
 
     }
-
 }
 ?>
  
@@ -38,10 +42,10 @@ if(isset($_POST['but_submit'])){
         <div id="div_login">
             <h1>Login</h1>
             <div>
-                <input type="text" class="textbox" id="txt_uname" name="txt_uname" placeholder="Username" />
+                <input type="text" class="textbox" id="uname" name="uname" placeholder="Username" />
             </div>
             <div>
-                <input type="password" class="textbox" id="txt_uname" name="txt_pwd" placeholder="Password"/>
+                <input type="password" class="textbox" id="txt_uname" name="pwd" placeholder="Password"/>
             </div>
             <div>
                 <input type="submit" value="Submit" name="but_submit" id="but_submit" />
