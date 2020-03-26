@@ -4,21 +4,19 @@ require_once "connection.php";
 
 if(isset($_POST['but_submit'])){
 
- 
+
     $uname = $_POST["username"];
     $kode = $_POST["password"];
- 
+
 
     $uname = mysqli_real_escape_string($connection,$_POST['uname']);
     $kode = mysqli_real_escape_string($connection,$_POST['pwd']);
 
-    if ($uname != "" && $kode != ""){
+    if (!empty($uname) && !empty($kode)){
 
         $sql_query = ("SELECT * FROM users WHERE username='$uname' AND password='$kode'");
         $result = mysqli_query($connection,$sql_query);
-        $row = mysqli_fetch_array($result);
-
-        $count = $row['cntUser'];
+        $count = mysqli_num_rows($result);
 
         if($count > 0){
             $_SESSION['uname'] = $uname;
@@ -30,11 +28,11 @@ if(isset($_POST['but_submit'])){
     }
 }
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+
 </head>
 <body>
 <div class="container">
@@ -55,7 +53,3 @@ if(isset($_POST['but_submit'])){
 </div>
 </body>
 </html>
-
-
-
-
