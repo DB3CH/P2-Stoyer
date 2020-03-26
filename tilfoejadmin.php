@@ -19,7 +19,7 @@
    
     <div class="form-element">
         <label>Password</label>
-        <input type="text" name="kode" required />
+        <input type="text" name="password" required />
     </div>
     <button type="submit" name="register" value="register">Register</button>
 </form>
