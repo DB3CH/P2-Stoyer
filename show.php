@@ -81,7 +81,7 @@ if(!$results){
   ?>
 </table>
 
-
+<a href="logud.php">Log ud</a>
 
 
 
