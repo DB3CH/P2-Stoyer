@@ -23,26 +23,28 @@ if(!$results){
 
 ?>
 <!--CSS der laver gitter i vores tabel, skal flyttes til eksternt dokument -->
-<style>
-  table, th, td{
-    border: 1px solid black;
-  }
 
-</style>
 
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="showstyle.css">
 <title>Show</title>
 <meta charset="utf-8">
 </head>
 <body>
 
-<a href="insert.php">Indsæt</a>
+<div class="header">
+
+<a href="insert.php">Indsæt tøj</a>
+
+<h2>Butik Strøyer Admin </h1>
+
+<a href="logud.php">Log ud</a>
+
+</div>
 
 <h2>Produkt oversigt</h2>
-
-
 
 
 <!-- Table der indeholder alle produkter i databasen -->
@@ -72,16 +74,18 @@ if(!$results){
       ?>
       <!-- "rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
       <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
-      <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger</a></td>
+      <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger i <?php echo $row ['model'];?> </a></td>
       <td><a href="delete.php?id=<?php echo $row['ID']?>" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
-      >Slet</a></td>
+      >Slet <?php echo $row ['model'];?>  </a></td>
    <?php
 
   }
   ?>
 </table>
 
-<a href="logud.php">Log ud</a>
+<div class="bg-billede">
+
+</div>
 
 
 
