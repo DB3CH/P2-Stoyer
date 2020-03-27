@@ -60,6 +60,7 @@ if(!$results){
   }
   ?>
 </table>
+<a href="viskurv.php">Se din kurv</a>
 
 
 
