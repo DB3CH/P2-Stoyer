@@ -5,6 +5,8 @@ print_r($_SESSION["indkøbskurv"]);
 
 if (isset($_POST['ryd'])) {
   session_destroy();
+
+  header("location: viskurv.php");
 }
 ?>
 <!DOCTYPE html>
