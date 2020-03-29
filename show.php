@@ -38,9 +38,10 @@ if(!$results){
 
 <a href="insert.php">Indsæt tøj</a>
 
-<h2>Butik Strøyer Admin </h1>
+<h2>Butik Strøyer Admin </h2>
 
-<a href="logud.php">Log ud</a>
+<a href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a>
+
 
 </div>
 
