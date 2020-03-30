@@ -11,10 +11,7 @@ if(isset($_GET['id'])){
 		//$query indeholder sql kode der sletter alt indehold med den givne id
 		$query = "SELECT * FROM produkttest WHERE id= $id ";
 
-        $results = mysqli_query($connection,$query);
 
-
-        $row = mysqli_fetch_assoc($results);
     }
 }
 ?>
@@ -29,7 +26,7 @@ if(isset($_GET['id'])){
 <body>
 
 <?php
-$result = mysqli_query($connection,"SELECT * FROM `produkttest`WHERE id= $id");
+$result = mysqli_query($connection,$query);
 while($row = mysqli_fetch_assoc($result)){
 
     echo "<div class='product_wrapper'>
