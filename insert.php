@@ -7,12 +7,7 @@ require_once "connection.php";
 if(!isset($_SESSION['login'])){
     header('Location: login.php');
 }
-
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -44,7 +39,7 @@ if(!isset($_SESSION['login'])){
        <li> <Lable>Beskrivelse:</Lable>
         <input type="text" id="beskrivelse" name="beskrivelse"> </li>
        <li> <Lable>Pris:</Lable>
-        <input type="number" min="0.00" max="999999.00" step="100.00" id="pris" name="pris"> </li>
+        <input type="number" min="0.00" max="999999.00" id="pris" name="pris"> </li>
 
         <input type="submit" value="Indsæt">
         </ul>
