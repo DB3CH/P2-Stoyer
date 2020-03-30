@@ -11,15 +11,15 @@ h1 {
 }
 
 .bg-billede {
-  /* The image used */
+  /* billedet */
   background-image: url("butikstrøyer.png");
 
-  /* Control the height of the image */
+  /* højden på billedet */
   min-height: 700px;
 
-  /* Center and scale the image nicely */
+  /* Center billedet */
   background-position: center;
-  background-repeat: no-repeat;
+
   background-size: cover;
   position: relative;
 }
