@@ -41,6 +41,7 @@ if(!isset($_SESSION['login'])){
        <li> <Lable>Pris:</Lable>
         <input type="number" min="0.00" max="999999.00" id="pris" name="pris"> </li>
 
+
         <input type="submit" value="Indsæt">
         </ul>
     </form>
