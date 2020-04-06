@@ -33,6 +33,7 @@ if (isset($_POST['indsæt'])) {
 
 }
 
+
 ?>
 
 <!DOCTYPE html>
