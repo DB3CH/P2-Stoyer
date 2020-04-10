@@ -22,7 +22,7 @@ if(!$results){
 
 
 ?>
-<!--CSS der laver gitter i vores tabel, skal flyttes til eksternt dokument -->
+
 
 
 <!DOCTYPE html>
@@ -54,6 +54,7 @@ if(!$results){
     <th>Katagori</th>
     <th>Producent</th>
     <th>Model</th>
+    <th>Billede</th>
     <th>Pris</th>
     <th>Beskrivelse</th>
   </tr>
@@ -70,10 +71,11 @@ if(!$results){
       echo "<td>".$row['kategori']."</td>";
       echo "<td>".$row['producent']."</td>";
       echo "<td>". $row['model']."</td>";
+      echo "<td>"."<img src='billeder/". $row['billede']."'"."</td>";
       echo "<td>". $row['pris']. ".kr". "</td>";
       echo "<td>".$row['beskrivelse']."</td>";
       ?>
-      <!-- "rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
+      <!--"rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
       <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
       <td><a href="rediger.php?id=<?php echo $row['ID']?>">Rediger i <?php echo $row ['model'];?> </a></td>
       <td><a href="delete.php?id=<?php echo $row['ID']?>" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
