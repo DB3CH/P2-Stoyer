@@ -39,7 +39,7 @@ if (isset($_POST['register'])) {
 <body>
 
 
-<form method="post" action="phptilfoejadmin.php" name="signup-form">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" name="signup-form">
     <div class="form-element">
         <label>Username</label>
         <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />

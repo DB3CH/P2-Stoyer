@@ -34,7 +34,6 @@ if (isset($_POST['indsæt'])) {
 }
 
 
->>>>>>> e7d8ced47fd915ccb406db43879d567d58777224
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +55,7 @@ if (isset($_POST['indsæt'])) {
 
 </div>
 <!-- Form hvor data kan indsættes, post = videre til phpaction, hvor det bliver sat på databasen. -->
-	<form action="phpaction.php" method="POST" class="container">
+	<form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" class="container">
         <ul>
        <li> <label>Kategori:</label>
         <input type="text" id="kategori" name="kategori"> </li>
