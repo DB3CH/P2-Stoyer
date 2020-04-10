@@ -71,7 +71,7 @@ if(!$results){
       echo "<td>".$row['kategori']."</td>";
       echo "<td>".$row['producent']."</td>";
       echo "<td>". $row['model']."</td>";
-      echo "<td>"."<img src='billeder/". $row['billede']."'"."</td>";
+      echo "<td>"."<img src='billeder/". $row['billede']."'>"."</td>";
       echo "<td>". $row['pris']. ".kr". "</td>";
       echo "<td>".$row['beskrivelse']."</td>";
       ?>
