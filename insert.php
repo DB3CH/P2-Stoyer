@@ -8,32 +8,6 @@ if(!isset($_SESSION['login'])){
     header('Location: login.php');
 }
 
-//Denne kode bliver kun kørt, hvis der bliver trykket på submit knappen "indsæt"
-if (isset($_POST['indsæt'])) {
-  //Tager informationen fra formen og sætter den i variabler, HTMLentities sørger for at det ikke er skrevet kode i formen.
-    $kategori = ($_POST['kategori']);
-    $producent = ($_POST['producent']);
-    $model = htmlentities($_POST['model']);
-    $beskrivelse = ($_POST['beskrivelse']);
-    $pris = htmlentities($_POST['pris']);
-
-  //Sætter sql query til at indsætte data i en variabel
-  $sql = "INSERT INTO produkttest (kategori, producent, model, pris, beskrivelse)
-  VALUES ('$kategori', '$producent', '$model', '$pris', '$beskrivelse')";
-
-  //if staement viser om dataen er skrevet eller om der er en error
-  if (mysqli_query($connection, $sql)) {
-      echo "New record created successfully";
-  } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($connection);
-  }
-
-  //header sender brugeren videre til show.php
-  header("location: show.php");
-
-}
-
-
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +29,7 @@ if (isset($_POST['indsæt'])) {
 
 </div>
 <!-- Form hvor data kan indsættes, post = videre til phpaction, hvor det bliver sat på databasen. -->
-	<form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" class="container">
+	<form action="upload.php" method="POST" class="container" enctype="multipart/form-data">
         <ul>
        <li> <label>Kategori:</label>
         <input type="text" id="kategori" name="kategori"> </li>
@@ -63,6 +37,8 @@ if (isset($_POST['indsæt'])) {
         <input type="text" id="producent" name="producent"> </li>
        <li> <Lable>Model:</Lable>
         <input type="text" id="model" name="model"> </li>
+   
+
        <li> <Lable>Beskrivelse:</Lable>
         <input type="text" id="beskrivelse" name="beskrivelse"> </li>
        <li> <Lable>Pris:</Lable>
@@ -75,3 +51,8 @@ if (isset($_POST['indsæt'])) {
 
 </body>
 </html>
+
+
+<?php
+mysqli_close($connection);
+?>
