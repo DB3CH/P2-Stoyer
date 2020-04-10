@@ -19,6 +19,9 @@ foreach ($_SESSION["indkøbskurv"] as $item) {
 
       <div class='model'>".$row['model']."</div>
 
+      <div> <img src='billeder/". $row['billede']."'>"." </div>
+
+
       <div class='pris'>kr.".$row['pris']."</div>
 
       <input type='hidden' name='id' value=".$row['id']." />
@@ -47,6 +50,12 @@ if (isset($_POST['ryd'])) {
   <head>
     <meta charset="utf-8">
     <title>Indkøbskurv</title>
+       <style>
+        img {
+ height: 100px;
+ width: auto;
+}
+    </style>
   </head>
   <body>
     <form class="ryd_indkøb" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">

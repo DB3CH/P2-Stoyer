@@ -19,6 +19,13 @@ if(isset($_GET['id'])){
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        img {
+ height: 100px;
+ width: auto;
+}
+    </style>
+    
 	<title><?php echo $row['model']; ?></title>
 	<meta charset="utf-8">
 </head>
@@ -37,9 +44,11 @@ while($row = mysqli_fetch_assoc($result)){
 
     <div class='model'>".$row['model']."</div>
 
+    <div> <img src='billeder/". $row['billede']."'>"." </div>
+
     <div class='pris'>kr.".$row['pris']."</div>
 
-		<input type='hidden' name='id' value=".$row['id']." />
+	<input type='hidden' name='id' value=".$row['id']." />
 
     </form>
 

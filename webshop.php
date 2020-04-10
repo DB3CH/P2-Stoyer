@@ -3,7 +3,7 @@ session_start();
 // Etablerer forbindelse til serveren
  require_once 'connection.php';
 
-$query = "SELECT ID,kategori,producent,model,pris,beskrivelse FROM produkttest";
+$query = "SELECT*FROM produkttest";
 $results = mysqli_query($connection,$query);
 
 if(!$results){
@@ -17,6 +17,11 @@ if(!$results){
   table, th, td{
     border: 1px solid black;
   }
+
+img {
+ height: 100px;
+ width: auto;
+}
 
 </style>
 
@@ -37,6 +42,7 @@ if(!$results){
     <th>Katagori</th>
     <th>Producent</th>
     <th>Model</th>
+    <th>Billeder</th>
     <th>Pris</th>
     <th>Beskrivelse</th>
   </tr>
@@ -49,6 +55,7 @@ if(!$results){
       echo "<td>".$row['kategori']."</td>";
       echo "<td>".$row['producent']."</td>";
       echo "<td>".$row['model']."</td>";
+      echo "<td>"."<img src='billeder/". $row['billede']."'>"."</td>";
       echo "<td>". $row['pris']."</td>";
       echo "<td>".$row['beskrivelse']."</td>";
       ?>

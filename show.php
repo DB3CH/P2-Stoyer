@@ -13,7 +13,7 @@ if(!isset($_SESSION['login'])){
 <?php
 // Etablerer forbindelse til serveren
 
-$query = "SELECT*FROM produkttest ORDER BY pris ASC";
+$query = "SELECT*FROM produkttest";
 $results = mysqli_query($connection,$query);
 
 if(!$results){
