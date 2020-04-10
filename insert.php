@@ -37,10 +37,9 @@ if(!isset($_SESSION['login'])){
         <input type="text" id="producent" name="producent"> </li>
        <li> <Lable>Model:</Lable>
         <input type="text" id="model" name="model"> </li>
-   
-
        <li> <Lable>Beskrivelse:</Lable>
         <input type="text" id="beskrivelse" name="beskrivelse"> </li>
+        <input type="file" name="file" value="">
        <li> <Lable>Pris:</Lable>
         <input type="number" min="0.00" max="999999.00" id="pris" name="pris"> </li>
 
