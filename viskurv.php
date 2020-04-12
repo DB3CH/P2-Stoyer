@@ -2,37 +2,39 @@
 require_once 'connection.php';
 session_start();
 
+if (isset($_SESSION["indkobskurv"])) {
 
 
-foreach ($_SESSION["indkøbskurv"] as $item) {
-  $id=$item;
+  foreach ($_SESSION["indkobskurv"] as $item) {
+    $id=$item;
 
-  $query = "SELECT * FROM produkttest WHERE id= $id ";
-  $result = mysqli_query($connection,$query);
-  while($row = mysqli_fetch_assoc($result)){
+    $query = "SELECT * FROM produkttest WHERE id= $id ";
+    $result = mysqli_query($connection,$query);
+    while($row = mysqli_fetch_assoc($result)){
 
-      echo "<div class='product_wrapper'>
+        echo "<div class='product_wrapper'>
 
-      <form method='post' action='kurv.php'>
+        <form method='post' action='kurv.php'>
 
-      <div class='producent'>".$row['producent']."</div>
+        <div class='producent'>".$row['kategori']."</div>
 
-      <div class='model'>".$row['model']."</div>
+        <div class='producent'>".$row['producent']."</div>
 
-      <div> <img src='billeder/". $row['billede']."'>"." </div>
+        <div class='model'>".$row['model']."</div>
 
-
-      <div class='pris'>kr.".$row['pris']."</div>
-
-      <input type='hidden' name='id' value=".$row['id']." />
-
-      </form>
-
-      </div>";
-    }
+        <div> <img src='billeder/". $row['billede']."'>"." </div>
 
 
+        <div class='pris'>kr.".$row['pris']."</div>
 
+
+        </form>
+
+        </div>";
+      }
+  }
+}else {
+  echo "Din kurv er tom";
 }
 
 //print_r($_SESSION["indkøbskurv"]);
