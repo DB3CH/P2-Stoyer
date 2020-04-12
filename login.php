@@ -6,8 +6,7 @@ require_once "connection.php";
 if(isset($_POST['but_submit'])){
 
 
-    $uname = $_POST["username"];
-    $kode = $_POST["password"];
+
 
 
     $uname = mysqli_real_escape_string($connection,$_POST['uname']);
@@ -27,6 +26,7 @@ if(isset($_POST['but_submit'])){
         }
 
     }
+  
 }
 ?>
 
@@ -40,7 +40,7 @@ if(isset($_POST['but_submit'])){
 <div class="bg-billede">
     <form method="post" action="" class="loginform">
         <div id="div_login">
-         
+
             <div>
                 <input type="text" class="textbox" id="uname" name="uname" placeholder="Admin" />
             </div>
@@ -57,4 +57,3 @@ if(isset($_POST['but_submit'])){
 
 </body>
 </html>
-
