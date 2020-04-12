@@ -26,7 +26,7 @@ if(isset($_POST['but_submit'])){
         }
 
     }
-  
+
 }
 ?>
 

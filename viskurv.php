@@ -40,7 +40,7 @@ if (isset($_SESSION["indkobskurv"])) {
 //print_r($_SESSION["indkøbskurv"]);
 
 if (isset($_POST['ryd'])) {
-  session_destroy();
+  unset($_SESSION['indkobskurv']);;
 
   header("location: viskurv.php");
 }
