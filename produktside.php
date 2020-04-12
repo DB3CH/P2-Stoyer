@@ -25,7 +25,7 @@ if(isset($_GET['id'])){
  width: auto;
 }
     </style>
-    
+
 	<title><?php echo $row['model']; ?></title>
 	<meta charset="utf-8">
 </head>
@@ -40,6 +40,8 @@ while($row = mysqli_fetch_assoc($result)){
 
     <form method='post' action='kurv.php'>
 
+    <div class='producent'>".$row['kategori']."</div>
+
     <div class='producent'>".$row['producent']."</div>
 
     <div class='model'>".$row['model']."</div>
@@ -48,7 +50,7 @@ while($row = mysqli_fetch_assoc($result)){
 
     <div class='pris'>kr.".$row['pris']."</div>
 
-	<input type='hidden' name='id' value=".$row['id']." />
+
 
     </form>
 
