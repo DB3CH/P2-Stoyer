@@ -1,6 +1,8 @@
 <?php
-require_once 'connection.php';
+//starter en session på siden
 session_start();
+
+//henter information fra connection.php, for at skabe kontakt til databasen
 require_once "connection.php";
 
 // tjekker om man er logget in
@@ -41,14 +43,16 @@ if (isset($_POST['rediger'])) {
 
 <?php
 
-
+//tjekker om der er blevet valgt et produkt
 if(isset($_GET['id'])){
+
 	//id fra URL bliver sat i en variabel
     $id=htmlentities($_GET['id']);
 
-
+  // tjekker at id variablen ikke er tom
 	if(!empty($id)){
-		//$query indeholder sql kode der sletter alt indehold med den givne id
+
+    //sql kode der henter alt informationen om produktet med det givne id
 		$query = "SELECT * FROM produkttest WHERE id= $id ";
 
         $results = mysqli_query($connection,$query);
@@ -57,6 +61,9 @@ if(isset($_GET['id'])){
         $row = mysqli_fetch_assoc($results);
     }
 }
+
+//informationen om produktet bliver anvendt i HTML formen for at udfylde values,
+//så brugeren kan se hvad de stod før, når de redigerer
 ?>
 
 <!DOCTYPE html>

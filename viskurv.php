@@ -1,10 +1,14 @@
 <?php
+//henter information fra connection.php, for at skabe kontakt til databasen
 require_once 'connection.php';
+
+//starter en session på siden
 session_start();
 
+//tjekker om der er en inkøbskurv funktion
 if (isset($_SESSION["indkobskurv"])) {
 
-
+  //foreach loop skriver alt informationen om produkterne i indkøbskurven
   foreach ($_SESSION["indkobskurv"] as $item) {
     $id=$item;
 
@@ -34,11 +38,13 @@ if (isset($_SESSION["indkobskurv"])) {
       }
   }
 }else {
+  //hvis der ikke er nogle produkter i kurven
   echo "Din kurv er tom";
 }
 
 //print_r($_SESSION["indkøbskurv"]);
 
+//tjekker om indkøbskurven skal rydes
 if (isset($_POST['ryd'])) {
   unset($_SESSION['indkobskurv']);;
 

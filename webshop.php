@@ -3,9 +3,11 @@ session_start();
 // Etablerer forbindelse til serveren
  require_once 'connection.php';
 
+//vælger alt informationen om alle produkter i databasne
 $query = "SELECT*FROM produkttest";
 $results = mysqli_query($connection,$query);
 
+//hvis der ikke er nogle resultater bliver fejlkode skrevet
 if(!$results){
    die("could not query the database" .mysqli_error());
 }
@@ -47,7 +49,8 @@ img {
     <th>Beskrivelse</th>
   </tr>
   <?php
-  // While loop der kører igennem databasen og echoer de valgte resultater i en tabel
+
+  // While loop der kører igennem da og echoer de valgte resultater i en tabel
   while($row = mysqli_fetch_assoc($results)){
 
     echo '<tr>';

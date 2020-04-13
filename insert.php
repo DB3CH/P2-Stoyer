@@ -1,6 +1,9 @@
 
 <?php
+//Starter en session på siden
 session_start();
+
+//henter information fra connection.php, for at skabe kontakt til databasen
 require_once "connection.php";
 
 // tjekker om man er logget in
@@ -9,7 +12,7 @@ if(!isset($_SESSION['login'])){
 }
 
 ?>
- 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +31,8 @@ if(!isset($_SESSION['login'])){
 <a href="logud.php">Log ud</a>
 
 </div>
-<!-- Form hvor data kan indsættes, post = videre til phpaction, hvor det bliver sat på databasen. -->
+
+<!-- Form hvor data kan indsættes, post sender informationen videre til upload.php, hvor det bliver sat på databasen. -->
 	<form action="upload.php" method="POST" class="container" enctype="multipart/form-data">
         <ul>
        <li> <label>Kategori:</label>
@@ -53,5 +57,6 @@ if(!isset($_SESSION['login'])){
 
 
 <?php
+//Lukker forbindelsen til databasen
 mysqli_close($connection);
 ?>
