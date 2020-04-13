@@ -5,7 +5,7 @@ session_start();
 //opretter forbindelse til databasen
 require_once 'connection.php';
 
-//tjekker om der er valgt en id fre webshoppen
+//tjekker om der er valgt en id fra webshoppen
 if(isset($_GET['id'])){
 
 	//id fra URL bliver sat i en variabel

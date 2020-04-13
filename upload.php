@@ -38,7 +38,7 @@ require_once "connection.php";
   $pris = htmlentities($_POST['pris']);
 
 
- //sql kode indsætter alt data om produktet og billedenavnet ind på databsen
+ //sql kode indsætter alt data om produktet og billedenavnet ind på databasen
 $sql = "INSERT INTO produkttest (kategori, producent, billede, model, pris, beskrivelse)
 VALUES ('$kategori', '$producent','$fileNameNew', '$model', '$pris', '$beskrivelse')";
             if (mysqli_query($connection, $sql)) {
