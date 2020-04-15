@@ -16,6 +16,8 @@ require_once "connection.php";
 		//indsætter idet fra de valgte produkt i databasen
     array_push($_SESSION["indkobskurv"], $id);
 
+
+
 		//henviser tilbage til webshoppen
   header("location: webshop.php");
 

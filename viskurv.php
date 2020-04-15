@@ -14,28 +14,33 @@ if (isset($_SESSION["indkobskurv"])) {
 
     $query = "SELECT * FROM produkttest WHERE id= $id ";
     $result = mysqli_query($connection,$query);
-    while($row = mysqli_fetch_assoc($result)){
+      while($row = mysqli_fetch_assoc($result)){
 
-        echo "<div class='product_wrapper'>
+          echo "<div class='product_wrapper'>
 
-        <form method='post' action='kurv.php'>
+          <form method='post' action='kurv.php'>
 
-        <div class='producent'>".$row['kategori']."</div>
+          <div class='producent'>".$row['kategori']."</div>
 
-        <div class='producent'>".$row['producent']."</div>
+          <div class='producent'>".$row['producent']."</div>
 
-        <div class='model'>".$row['model']."</div>
+          <div class='model'>".$row['model']."</div>
 
-        <div> <img src='billeder/". $row['billede']."'>"." </div>
-
-
-        <div class='pris'>kr.".$row['pris']."</div>
+          <div> <img src='billeder/". $row['billede']."'>"." </div>
 
 
-        </form>
+          <div class='pris'>kr.".$row['pris']."</div>
 
-        </div>";
-      }
+
+          </form>
+
+          </div>";
+        }
+      ?>
+
+      <a href="fjernfrakurv.php?id=<?php echo $id;?>"> Fjern dette element </a>
+      <?php
+
   }
 }else {
   //hvis der ikke er nogle produkter i kurven
