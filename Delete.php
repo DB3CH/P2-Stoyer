@@ -7,6 +7,14 @@ if(isset($_GET['id'])){
 	//id fra URL bliver sat i en variabel
 	$id=htmlentities($_GET['id']);
 
+	$sql = "SELECT billede FROM produkttest WHERE id= $id";
+
+	$results = mysqli_query($connection,$sql);
+	$row = mysqli_fetch_assoc($results);
+	$navn = $row['billede'];
+
+	unlink('billeder/'.$navn);
+
 	if(!empty($id)){
 		//$query indeholder sql kode der sletter alt indehold med den givne id
 		$query = "DELETE FROM produkttest WHERE id= $id ";
@@ -20,8 +28,6 @@ if(isset($_GET['id'])){
 		}else{
 			die("could not query the database" .msqli_error());
 		}
-
-
 	}
 }
 
