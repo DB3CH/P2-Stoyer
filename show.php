@@ -1,5 +1,8 @@
 <?php
+//starter en session på siden
 session_start();
+
+//henter information fra connection.php, for at skabe kontakt til databasen
 require_once "connection.php";
 
 // tjekker om man er logget in
@@ -11,11 +14,11 @@ if(!isset($_SESSION['login'])){
 ?>
 
 <?php
-// Etablerer forbindelse til serveren
-
+// Henter information fra alle produkter på databasen
 $query = "SELECT*FROM produkttest";
 $results = mysqli_query($connection,$query);
 
+//hvis der ikke er nogle resultater bliver fejlkode skrevet
 if(!$results){
    die("could not query the database" .mysqli_error());
 }

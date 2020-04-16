@@ -1,44 +1,57 @@
 <?php
+//henter information fra connection.php, for at skabe kontakt til databasen
 require_once 'connection.php';
+
+//starter en session på siden
 session_start();
 
+//tjekker om der er en inkøbskurv funktion
+if (isset($_SESSION["indkobskurv"])) {
+
+  //foreach loop skriver alt informationen om produkterne i indkøbskurven
+  foreach ($_SESSION["indkobskurv"] as $item) {
+    $id=$item;
+
+    $query = "SELECT * FROM produkttest WHERE id= $id ";
+    $result = mysqli_query($connection,$query);
+      while($row = mysqli_fetch_assoc($result)){
+
+          echo "<div class='product_wrapper'>
+
+          <form method='post' action='kurv.php'>
+
+          <div class='producent'>".$row['kategori']."</div>
+
+          <div class='producent'>".$row['producent']."</div>
+
+          <div class='model'>".$row['model']."</div>
+
+          <div> <img src='billeder/". $row['billede']."'>"." </div>
 
 
-foreach ($_SESSION["indkøbskurv"] as $item) {
-  $id=$item;
-
-  $query = "SELECT * FROM produkttest WHERE id= $id ";
-  $result = mysqli_query($connection,$query);
-  while($row = mysqli_fetch_assoc($result)){
-
-      echo "<div class='product_wrapper'>
-
-      <form method='post' action='kurv.php'>
-
-      <div class='producent'>".$row['producent']."</div>
-
-      <div class='model'>".$row['model']."</div>
-
-      <div> <img src='billeder/". $row['billede']."'>"." </div>
+          <div class='pris'>kr.".$row['pris']."</div>
 
 
-      <div class='pris'>kr.".$row['pris']."</div>
+          </form>
 
-      <input type='hidden' name='id' value=".$row['id']." />
+          </div>";
+        }
+      ?>
 
-      </form>
+      <a href="fjernfrakurv.php?id=<?php echo $id;?>"> Fjern dette element </a>
+      <?php
 
-      </div>";
-    }
-
-
-
+  }
+}else {
+  //hvis der ikke er nogle produkter i kurven
+  echo "Din kurv er tom";
 }
 
 //print_r($_SESSION["indkøbskurv"]);
 
+//tjekker om indkøbskurven skal rydes
 if (isset($_POST['ryd'])) {
-  session_destroy();
+  unset($_SESSION['indkobskurv']);;
 
   header("location: viskurv.php");
 }

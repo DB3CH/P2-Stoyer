@@ -2,7 +2,7 @@
 // Etablerer forbindelse til serveren
 require_once "connection.php";
 
-
+  //anvender $_FILES til at hente forskellige informationer fra den uploadese fil
   $file = $_FILES['file'];
 
 
@@ -12,18 +12,25 @@ require_once "connection.php";
   $fileError = $_FILES['file']['error'];
   $fileType = $_FILES['file']['type'];
 
+  //deler filnavnet ved hvert . for at finde filtypen
   $fileExt = explode('.', $fileName);
+
+  //laver alt tekst til lowercase og vælger den sidste del for at finde filtypen
   $fileActualExt = strtolower(end($fileExt));
 
+  //en array med alle de tilladte filtyper
   $allowed = array('jpg', 'jpeg', 'png', 'raw', 'jpe', 'jif', 'jfif', 'jfi', 'webp', 'heif', 'heic');
 
-//Tager informationen fra formen og sætter den i variabler, HTMLentities sørger for at det ikke er skrevet kode i formen. 
 
+  //første if tjekker om filtypen der er uplaoded er en af de tilladte filtyper
   if (in_array($fileActualExt, $allowed)) {
+      //Den anden if tjekker at der er 0 fejl under upload af filen
       if ($fileError === 0) {
+        //laver et unikt navn til filen inden den bliver lagt i mappen med billeder
         $fileNameNew = uniqid('', true).".".$fileActualExt;
         $fileDestination = 'billeder/'.$fileNameNew;
 
+  //alt den indtastede information om produktet bliver hentet fra post
   $kategori = ($_POST['kategori']);
   $producent = ($_POST['producent']);
   $model = htmlentities($_POST['model']);
@@ -31,7 +38,7 @@ require_once "connection.php";
   $pris = htmlentities($_POST['pris']);
 
 
- //Sætter sql query til at indsætte data i en variabel
+ //sql kode indsætter alt data om produktet og billedenavnet ind på databasen
 $sql = "INSERT INTO produkttest (kategori, producent, billede, model, pris, beskrivelse)
 VALUES ('$kategori', '$producent','$fileNameNew', '$model', '$pris', '$beskrivelse')";
             if (mysqli_query($connection, $sql)) {
@@ -44,9 +51,11 @@ VALUES ('$kategori', '$producent','$fileNameNew', '$model', '$pris', '$beskrivel
 
 
       }else {
+        //hvis der er fejl i upload skrives fejlkode
         echo "Der skete en fejl under upload, prøv igen.";
     }
   } else {
+    //hvis den forkerte filtype uploades skrives det
     echo "Denne filtype understøttes ikke.";
   }
 
