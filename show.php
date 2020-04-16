@@ -41,9 +41,9 @@ if(!$results){
 <h2>Butik Strøyer Admin </h2>
 
 <a href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a>
-
-
 </div>
+
+
 
 <h2>Produkt oversigt</h2>
 
