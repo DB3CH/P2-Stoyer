@@ -58,7 +58,7 @@ while($row = mysqli_fetch_assoc($result)){
 
     <div class='pris'>kr.".$row['pris']."</div>
 
-
+    
 
     </form>
 
