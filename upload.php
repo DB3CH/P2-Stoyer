@@ -34,7 +34,7 @@ require_once "connection.php";
   $kategori = htmlentities($_POST['kategori']);
   $producent = htmlentities($_POST['producent']);
   $model = htmlentities($_POST['model']);
-  $størrelse = htmlentities($_POST['størrelse'])
+  $størrelse = htmlentities($_POST['størrelse']);
   $beskrivelse = ($_POST['beskrivelse']);
   $pris = htmlentities($_POST['pris']);
 
