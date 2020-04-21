@@ -32,6 +32,35 @@ p{
 
 /*forside styling*/
 
+.shoppingcart{
+  	float: right;
+    border-radius: 2px;
+    padding: 4px;
+    margin-right: 20px;
+   
+}
+
+.shoppingcart img{
+	height: auto;
+    width: 30px;
+}
+
+.shoppingcart:hover{
+	opacity: 0.7;
+}
+
+.shoppingcart a{
+	text-decoration: none;
+	color: white;
+	float: right;
+}
+
+.shoppingcart p{
+	font-size: 15px;
+}
+
+
+
 .header{
 	margin-top: 25px;
 }
@@ -250,25 +279,18 @@ p{
 }
 
 .imagesContainer{
-	max-width: 90%;
-	width: 100%;
+	max-width: 1700px;
+	width: 90%;
 	margin: 60px auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-	grid-column-gap: 30px;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	grid-column-gap: 90px;
 	grid-row-gap: 30px;
-
 }
 
 .imagesContainer img{
-		box-shadow: 5px 5px 15px #000;
-		
-		height: auto; 
-    width: auto; 
-    max-width: 240px; 
-    max-height: 300px;
-    min-height: 300px;
-    min-width: 240PX;
+	width: 100%;
+	box-shadow: 5px 5px 15px #000;
         
       
 

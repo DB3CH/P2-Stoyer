@@ -24,6 +24,17 @@ if(!$results){
   	<meta charset="utf-8">
 </head>
 <body>
+
+
+    
+   
+</div>
+	<div class="shoppingcart">
+	<a href="viskurv.php">
+		<img class="shoppingcart" src="shoppingcart.png"> 
+		<p>0,00 kr.</p>
+	</a>
+	</div>
 	<div class="nav">
 
 		<label for="toggle">&#9776;</label>
