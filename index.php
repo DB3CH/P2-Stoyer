@@ -56,7 +56,7 @@ if(!$results){
 		<div class="heroContent">
 			<h1>Butik Strøyer</h1>
 			<p>Kvindetøj med fokus på kvalitet og den nyeste mode.</p>
-			<a href="shop.html" class="btn">Shop her</a>
+			<a href="shop.php" class="btn">Shop her</a>
 		</div>
 		<div class="scroll">
 			<div class="line"></div>
