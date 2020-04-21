@@ -6,7 +6,7 @@ session_start();
 //henter information fra connection.php, for at skabe kontakt til databasen
 require_once "connection.php";
 
-//Første if tjekker om der er trykket på submit knappen
+//Første if tjekker om der er trykket på submit knappen Hej Hej
 if(isset($_POST['but_submit'])){
 
     //indsætter den indtastede kode i to variabler
