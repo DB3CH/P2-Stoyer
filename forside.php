@@ -63,7 +63,8 @@ if(!$results){
 		</div>
 		<div class="flexItem flexText">
 			<h2>Placeret centralt i Gravensgade</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>
+			<p> 
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>
 			<a href="omOs.html" class="btnTrends">Se her</a>
 		</div>
 	</div>
@@ -71,34 +72,30 @@ if(!$results){
 
 	<div class="imageSection">
 		<h2>Nyeste produkter</h2>
-		<div class="imagesContainer">
-			<?php
-			 while($row = mysqli_fetch_assoc($results)){
 
-    echo '<tr>';
+<div class="imagesContainer">
 
-      echo "<td>".$row['kategori']."</td>";
-      echo "<td>".$row['producent']."</td>";
-      echo "<td>".$row['model']."</td>";
-      echo "<td>"."<img src='billeder/". $row['billede']."'>"."</td>";
-      echo "<td>". $row['pris']."</td>";
-      echo "<td>".$row['beskrivelse']."</td>";
-      ?>
-      <!-- "rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
-      <td><a href="produktside.php?id=<?php echo $row['ID']?>">Se produkt</a></td>
 
-   <?php
+  <?php
 
-  }
-  ?>
-</table>
-<a href="viskurv.php">Se din kurv</a>
-		</div>
+  // While loop der kører igennem da og echoer de valgte resultater i en tabel
+  while($row = mysqli_fetch_assoc($results)){
+
+  	?>
+		
+			<div class="images"><a href="produktside.php?id=<?php echo $row['ID']?>"> <?php echo "<img src='billeder/". $row['billede']."'>";?><div class="imgText"><?php echo $row ['producent']." ". $row['model']?><br><?php echo $row ['pris']?></div></a></div>
+
+
+
+				<?php
+	}
+	?>
+</div>
 		<div class="btnlow">
 			<a href="#" class="btnTrends">Se her</a>
 		</div>
 			
-		
+
 		<div class="line2"></div>
 			
 	</div>
