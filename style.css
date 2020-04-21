@@ -1,0 +1,619 @@
+html{
+	font-family: proxima nova, sans-serif;
+}
+
+body{
+	width: 100%
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+h1{
+	font-family: didot, sans-serif;
+	font-size: 70px;
+	color: white;
+}
+
+h2{
+	font-family: didot, sans-serif;
+	font-size: 70px;
+	color: white;
+}
+
+p{
+	font-size: 20px;
+}
+
+/*forside styling*/
+
+.header{
+	margin-top: 25px;
+}
+
+.header a{
+	text-decoration: none;
+}
+
+.pageHeader a{
+	text-decoration: none;
+}
+
+.header h1{
+	font-size: 70px;
+	font-family: roboto, sans-serif;
+	text-align: center;
+	padding: 0px 0px 25px 0px;
+}
+
+
+.nav ul{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+.nav li{
+	display: inline-block;
+}
+
+.nav a{
+	text-decoration: none;
+	color: white;
+	clear: right;
+	display: block;
+	padding: 0 50px;
+	font-size: 20px;
+	font-family: sans-serif;
+	transition: 0.4s;
+}
+
+.nav a:hover{
+	opacity: 0.5;
+}
+
+.navLine{
+	width: 80%;
+	color: white;
+	margin: auto;
+}
+
+
+.btn{
+	background-color: white;
+	text-decoration: none;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	width: 200px;
+	height: 60px;
+	justify-content: center;
+	border-radius: 3px;
+	font-size: 20px;
+	color: black;
+	-webkit-box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.08);
+	-moz-box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.08);
+	box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.08);
+}
+
+.btnTrends{
+	background-color: white;
+	text-decoration: none;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	width: 200px;
+	height: 60px;
+	justify-content: center;
+	border-radius: 3px;
+	font-size: 20px;
+	color: black;
+	-webkit-box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.08);
+	-moz-box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.08);
+	box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.08);
+	margin: auto;
+
+}
+
+
+.btnTrends:hover{
+	opacity: 0.8;
+}
+
+.btn:hover{
+	opacity: 0.8;
+}
+
+.btnlow{
+	width: 100%;
+	margin-top: 25px;
+}
+
+
+.hero{
+	height: 60vh;
+	width: 100%;
+	
+}
+
+.hero p{
+	text-shadow: 0px 6px 22px 0px rgba(0,0,0,0.08);
+}
+
+.heroImage{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.heroImage img{
+	min-width: 100%;
+	min-height: 100%;
+}
+
+
+
+.logo{
+	float: left;
+	text-decoration: none;
+	color: white;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+
+.heroContent{
+	margin: 30vh 0 0 15%;
+}
+
+.heroContent p{
+	color: white;
+	margin-bottom: 30px;
+	opacity: 0.9;
+}
+
+.heroContent h1{
+	color: white;
+}
+
+.scroll{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	right: 1.7%;
+	bottom: 63px;
+	transform: rotate(270deg);
+}
+
+.scroll p{
+	color: white;
+	font-size: 16px;
+}
+
+.line{
+	height: 2px;
+	width: 70px;
+	margin-right: 10px;
+	background-color: white;
+}
+
+.flex-2{
+	width: 70%;
+	margin: 3em auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1500px;
+}
+
+.flex-2 .flexItem{
+	margin: 60px;
+	flex: 1;
+}
+
+.flex-2 .flexItem img{
+	max-width: 100%;
+}
+
+.flex-2 .flexItem h2{
+	color: black;
+}
+.flex-2 .flexItem p{
+	margin: 15px 0 30px 0;
+}
+
+.flex-2 .flexItem a{
+	font-size: 20px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.imageSection{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 100px;
+}
+.imageSection h2{
+	margin-bottom: 0.5em;
+	color: black;
+}
+
+.imagesContainer{
+	max-width: 1700px;
+	width: 90%;
+	margin: 60px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	grid-column-gap: 90px;
+	grid-row-gap: 30px;
+}
+
+.imagesContainer img{
+	width: 100%;
+	box-shadow: 5px 5px 15px #000;
+}
+
+.imagesContainer a:hover{
+	opacity: 0.5;
+}
+
+.images{
+	position: relative;
+}
+
+.images a{
+	color: black;
+}
+
+.imgText{
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  }
+
+.line2{
+	background-color: black;
+	height: 3px;
+	width: 70px;
+	margin: 5em auto 0 auto; 
+}
+
+footer{
+	text-align: center;
+	margin-top: 8em;
+}
+
+footer img{
+	padding: 10px;
+	vertical-align: middle;
+}
+
+footer a:hover{
+	opacity: 0.5;
+}
+
+footer p{
+	margin: 1em 0 7em 0;
+	opacity: 0.5;
+}
+
+label{
+	margin: 0 40px 0 0;
+	font-size: 26px;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+	float: right;
+}
+
+#toggle{
+	display: none;
+}
+
+
+
+
+/*Trends styling*/
+
+
+.pageHeader{
+	margin-top: 25px;
+}
+
+.pageHeader h1{
+	font-size: 70px;
+	font-family: roboto, sans-serif;
+	text-align: center;
+	padding: 0px 0px 25px 0px;
+	color: black;
+}
+
+
+
+.pageNav ul{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+.pageNav li{
+	display: inline-block;
+}	
+
+.pageNav a{
+	text-decoration: none;
+	color: black;
+	clear: right;
+	display: block;
+	padding: 0 50px;
+	font-size: 20px;
+	font-family: sans-serif;
+	transition: 0.4s;
+}
+
+.pageNav a:hover{
+	opacity: 0.5;
+}
+
+.navLinePage{
+	width: 80%;
+	color: white;
+	margin: auto;
+}
+
+.trendsSection{
+	text-align: center;
+	margin: 5em 0;
+}
+.trendsSection h2{
+	margin-bottom: 0.5em;
+	color: black;
+}
+
+.trends{
+	max-width: 1700px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+}
+
+.trends img{
+	width: 100%;
+	box-shadow: 5px 5px 15px #000;
+}
+
+.trends a:hover{
+	opacity: 0.5;
+}
+
+
+/*Shop styling*/
+
+
+.shopContainer{
+	max-width: 1700px;
+	width: 90%;
+	margin: 60px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-column-gap: 150px;
+	grid-row-gap: 50px;
+}
+
+.shopContainer img{
+	width: 100%;
+	box-shadow: 5px 5px 15px #000;
+}
+
+.shopContainer a:hover{
+	opacity: 0.5;
+}
+
+.shopSection{
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 100px;
+}
+.shopSection h2{
+	margin-bottom: 0.5em;
+	color: black;
+}
+
+.shopText{
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: bold;
+  }
+
+/*Products styling*/
+
+/*Om os styling*/
+
+.icons{
+	text-align: center;
+	margin-top: 1em;
+}
+
+.icons img{
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.icons a:hover{
+	opacity: 0.5;
+}
+
+.icons p{
+	margin: 1em 0 7em 0;
+	opacity: 0.5;
+}
+
+
+/*Kontakt os styling*/
+
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+	.flex-2{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.flex-2{
+		flex-direction: column;
+		width: 90%;
+	}
+	.mobileHide{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.flex-2{
+		width: 100%;
+		margin-top: 0px;
+	}
+	.flex-2 a{
+		font-size: 16px;
+
+	}
+	.flex-2 h1{
+		font-size: 50px;
+	}
+	.flex-2 h2{
+		font-size: 35px;
+		text-align: center;
+	}
+	.flex-2 p{
+		font-size: 16px;
+		text-align: center;
+	}
+	.flex-2 a{
+		font-size: 16px;
+	}
+	.btn{
+		font-size: 16px;
+
+	}
+	.btn2{
+		font-size: 16px;
+	}
+
+	.heroContent{
+		clear: both;
+		margin: 200px 0 0 5%;
+		padding-top: 130px;
+	}
+	.hero{
+		height: 850px;
+	}
+	.hero img{
+		height: 768px;
+	}
+	.imageSection{
+		text-align: left;
+		margin: 7em 0;
+	}
+	.imageSection h2{
+		margin-left: 5%;
+		text-align: center;
+		font-size: 35px;
+		margin-bottom: 60px;
+	}
+
+	footer{
+		margin-top: 30px; 
+	}
+
+	footer p{
+		font-size: 15px;
+	}
+
+	.header{
+		display: none;
+	}
+
+	
+	.scroll{
+		display: none;
+	}
+
+	.navLine{
+		display: none;
+	}
+
+	label{
+		display: block;
+		cursor: pointer;
+	}
+
+	.menu{
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+
+	.menu li{
+		display: block;
+		border-bottom: 1px solid #EAEAEB;
+		margin: 0;
+		padding: 30px;
+	}
+
+	.pageHeader{
+		display: none;
+	}
+
+	.navLinePage{
+		display: none;
+	}
+
+	.pageMenu{
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+
+	.pageMenu li{
+		display: block;
+		border-bottom: 1px solid #EAEAEB;
+		margin: 0;
+		padding: 30px;
+	}
+
+	#toggle:checked ~ .menu{
+		display: block;
+	}
+
+	#toggle:checked ~ .pageMenu{
+		display: block;
+	}
+
+
+}
