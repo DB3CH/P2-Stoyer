@@ -19,6 +19,6 @@ require_once "connection.php";
 
 
 		//henviser tilbage til webshoppen
-  header("location: webshop.php");
+  header("location: shop.php");
 
  ?>

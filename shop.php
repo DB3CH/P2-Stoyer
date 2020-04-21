@@ -1,3 +1,20 @@
+<?php
+session_start();
+// Etablerer forbindelse til serveren
+ require_once 'connection.php';
+
+//vælger alt informationen om alle produkter i databasne
+$query = "SELECT*FROM produkttest";
+$results = mysqli_query($connection,$query);
+
+//hvis der ikke er nogle resultater bliver fejlkode skrevet
+if(!$results){
+   die("could not query the database" .mysqli_error());
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +23,12 @@
   	<meta charset="utf-8">
 </head>
 <body>
+	<div class="shoppingcart">
+	<a href="viskurv.php">
+		<img class="shoppingcart" src="shoppingcart.png">
+		<p>0,00 kr.</p>
+	</a>
+	</div>
 
 	<div class="pageNav">
 
@@ -30,14 +53,23 @@
 	<div class="shopSection">
 		<h2>Produkter</h2>
 		<div class="shopContainer">
-			<div class="images"><a href="products.html"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
-			<div class="images"><a href="#"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
-			<div class="images"><a href="#"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
-			<div class="images"><a href="#"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
-			<div class="images"><a href="#"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
-			<div class="images"><a href="#"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
-			<div class="images"><a href="#"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
-			<div class="images"><a href="#"><img src="test.jpg"><div class="shopText">Produkt navn<br>1099,99 kr.</div></a></div>
+
+			  <?php
+
+			  // While loop der kører igennem da og echoer de valgte resultater i en tabel
+			  while($row = mysqli_fetch_assoc($results)){
+
+			  	?>
+
+						<div class="images"><a href="produktside.php?id=<?php echo $row['ID']?>"> <?php echo "<img src='billeder/". $row['billede']."'>";?><div class="shopText"><?php echo $row ['producent']." ". $row['model']?><br><?php echo $row ['pris']?></div></a></div>
+
+
+
+							<?php
+				}
+				?>
+
+
 		</div>
 
 	<footer>
