@@ -6,25 +6,25 @@
   	<meta charset="utf-8">
 </head>
 <body>
-	
+
 	<div class="pageNav">
-		
+
 		<label for="toggle">&#9776;</label>
 		<input type="checkbox" id="toggle">
 
 
 		<div class="pageHeader">
-		<a href="index.html"><h1>STRØYER</h1></a>
+		<a href="index.php"><h1>STRØYER</h1></a>
 		</div>
 
 		<ul class="pageMenu">
-			<li><a href="shop.html">Shop</a></li>
-			<li><a href="trends.html">Trends</a></li>
-			<li><a href="omOs.html">Om os</a></li>
+			<li><a href="shop.php">Shop</a></li>
+			<li><a href="trends.php">Trends</a></li>
+			<li><a href="omOs.php">Om os</a></li>
 			<li><a href="#">Kontakt</a></li>
 		</ul>
 		<hr class="navLinePage">
-		
+
 	</div>
 
 	<div class="flex-2">
@@ -40,7 +40,7 @@
 		<div class="flexItem">
 			<img src="group2.png" class="mobileHide">
 		</div>
-		
+
 	</div>
 
 	<footer>

@@ -26,12 +26,12 @@ if(!$results){
 <body>
 
 
-    
-   
+
+
 </div>
 	<div class="shoppingcart">
 	<a href="viskurv.php">
-		<img class="shoppingcart" src="shoppingcart.png"> 
+		<img class="shoppingcart" src="shoppingcart.png">
 		<p>0,00 kr.</p>
 	</a>
 	</div>
@@ -41,12 +41,12 @@ if(!$results){
 		<input type="checkbox" id="toggle">
 
 		<div class="header">
-		<a href="index.html"><h1>STRØYER</h1></a>
+		<a href="index.php"><h1>STRØYER</h1></a>
 		</div>
 		<ul class="menu">
-			<li><a href="shop.html">Shop</a></li>
-			<li><a href="trends.html">Trends</a></li>
-			<li><a href="omOs.html">Om os</a></li>
+			<li><a href="shop.php">Shop</a></li>
+			<li><a href="trends.php">Trends</a></li>
+			<li><a href="omOs.php">Om os</a></li>
 			<li><a href="#">Kontakt</a></li>
 		</ul>
 		<hr class="navLine">
@@ -65,16 +65,16 @@ if(!$results){
 		<div class="heroImage">
 			<img src="hero.jpg">
 		</div>
-	
+
 	</div>
 	<div class="flex-2">
-		
+
 		<div class="flexItem">
 			<img src="group2.png" class="mobileHide">
 		</div>
 		<div class="flexItem flexText">
 			<h2>Placeret centralt i Gravensgade</h2>
-			<p> 
+			<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>
 			<a href="omOs.html" class="btnTrends">Se her</a>
 		</div>
@@ -93,7 +93,7 @@ if(!$results){
   while($row = mysqli_fetch_assoc($results)){
 
   	?>
-		
+
 			<div class="images"><a href="produktside.php?id=<?php echo $row['ID']?>"> <?php echo "<img src='billeder/". $row['billede']."'>";?><div class="imgText"><?php echo $row ['producent']." ". $row['model']?><br><?php echo $row ['pris']?></div></a></div>
 
 
@@ -105,10 +105,10 @@ if(!$results){
 		<div class="btnlow">
 			<a href="#" class="btnTrends">Se her</a>
 		</div>
-			
+
 
 		<div class="line2"></div>
-			
+
 	</div>
 	<footer>
 		<a href="https://www.facebook.com/stroyeraalborg/"><img src="faceb_icon.png" alt="facebook icon"></a>
@@ -117,6 +117,6 @@ if(!$results){
 	</footer>
 
 
-	
+
 </body>
 </html>
