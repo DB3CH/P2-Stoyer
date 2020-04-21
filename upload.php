@@ -31,9 +31,10 @@ require_once "connection.php";
         $fileDestination = 'billeder/'.$fileNameNew;
 
   //alt den indtastede information om produktet bliver hentet fra post
-  $kategori = ($_POST['kategori']);
-  $producent = ($_POST['producent']);
+  $kategori = htmlentities($_POST['kategori']);
+  $producent = htmlentities($_POST['producent']);
   $model = htmlentities($_POST['model']);
+  $størrelse = htmlentities($_POST['størrelse'])
   $beskrivelse = ($_POST['beskrivelse']);
   $pris = htmlentities($_POST['pris']);
 
@@ -44,6 +45,7 @@ VALUES ('$kategori', '$producent','$fileNameNew', '$model', '$pris', '$beskrivel
             if (mysqli_query($connection, $sql)) {
           move_uploaded_file($fileTmpName, $fileDestination);
           echo "New record created successfully";
+          mysqli_close($connection);
           header("location: show.php?uploadsuccess");
       } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($connection);
