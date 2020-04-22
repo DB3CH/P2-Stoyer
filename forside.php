@@ -74,9 +74,10 @@ if(!$results){
 		</div>
 		<div class="flexItem flexText">
 			<h2>Placeret centralt i Gravensgade</h2>
-			<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>
-			<a href="omOs.html" class="btnTrends">Se her</a>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>
+
+    	<a href="omOs.php" class="btnTrends">Se her</a>
 		</div>
 	</div>
 	<div class="line2"></div>
@@ -103,7 +104,7 @@ if(!$results){
 	?>
 </div>
 		<div class="btnlow">
-			<a href="#" class="btnTrends">Se her</a>
+			<a href="Shop.php" class="btnTrends">Se her</a>
 		</div>
 
 
