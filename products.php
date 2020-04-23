@@ -69,7 +69,7 @@ if(isset($_GET['id'])){
 			<br>
 			<p><?php echo $row['beskrivelse'] ?></p>
 			<br>
-			<p>VI har Str. bla bla...</p>
+			<p><?php echo $row['storrelse'] ?></p>
 
 	     <a href="#" class="btnProducts">Tilføj</a>
 

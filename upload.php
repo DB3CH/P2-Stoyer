@@ -34,14 +34,14 @@ require_once "connection.php";
   $kategori = htmlentities($_POST['kategori']);
   $producent = htmlentities($_POST['producent']);
   $model = htmlentities($_POST['model']);
-  $størrelse = htmlentities($_POST['størrelse']);
+  $storrelse = htmlentities($_POST['storrelse']);
   $beskrivelse = ($_POST['beskrivelse']);
   $pris = htmlentities($_POST['pris']);
 
 
  //sql kode indsætter alt data om produktet og billedenavnet ind på databasen
-$sql = "INSERT INTO produkttest (kategori, producent, billede, model, pris, beskrivelse)
-VALUES ('$kategori', '$producent','$fileNameNew', '$model', '$pris', '$beskrivelse')";
+$sql = "INSERT INTO produkttest (kategori, producent, billede, storrelse, model, pris, beskrivelse)
+VALUES ('$kategori', '$producent', '$fileNameNew', '$storrelse', '$model', '$pris', '$beskrivelse')";
             if (mysqli_query($connection, $sql)) {
           move_uploaded_file($fileTmpName, $fileDestination);
           echo "New record created successfully";

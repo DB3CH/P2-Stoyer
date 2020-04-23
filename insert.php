@@ -42,12 +42,13 @@ if(!isset($_SESSION['login'])){
        <li> <Lable>Model:</Lable>
         <input type="text" id="model" name="model"> </li>
        <li> <Lable>Størrelse:</Lable>
-         <input type="text" id="størrelse" name="størrelse"> </li>
+         <input type="text" id="storrelse" name="storrelse" placeholder="Vi har størrelse..."> </li>
         <li> <Lable>Beskrivelse:</Lable>
         <input type="text" id="beskrivelse" name="beskrivelse"> </li>
-        <input type="file" name="file" value="">
+        <li><label>Indsæt billede:</lable>
+        <input type="file" name="file" value=""></li>
        <li> <Lable>Pris:</Lable>
-        <input type="number" min="0.00" max="999999.00" id="pris" name="pris"> </li>
+        <input type="number" min="0,00" max="999999,00" id="pris" name="pris"> </li>
 
 
         <input type="submit" value="Indsæt">
