@@ -36,19 +36,19 @@ if(!isset($_SESSION['login'])){
 	<form action="upload.php" method="POST" class="container" enctype="multipart/form-data">
         <ul>
        <li> <label>Kategori:</label>
-        <input type="text" id="kategori" name="kategori"> </li>
+        <input type="text" id="kategori" name="kategori" required> </li>
        <li> <Lable>Producent:</Lable>
-        <input type="text" id="producent" name="producent"> </li>
+        <input type="text" id="producent" name="producent" required> </li>
        <li> <Lable>Model:</Lable>
-        <input type="text" id="model" name="model"> </li>
+        <input type="text" id="model" name="model" required> </li>
        <li> <Lable>Størrelse:</Lable>
-         <input type="text" id="storrelse" name="storrelse" placeholder="Vi har størrelse..."> </li>
+         <input type="text" id="storrelse" name="storrelse" placeholder="Vi har størrelse..." required> </li>
         <li> <Lable>Beskrivelse:</Lable>
         <input type="text" id="beskrivelse" name="beskrivelse"> </li>
         <li><label>Indsæt billede:</lable>
-        <input type="file" name="file" value=""></li>
+        <input type="file" name="file" value="" required></li>
        <li> <Lable>Pris:</Lable>
-        <input type="number" min="0,00" max="999999,00" id="pris" name="pris"> </li>
+        <input type="number" min="0,00" max="999999,00" id="pris" name="pris" required> </li>
 
 
         <input type="submit" value="Indsæt">

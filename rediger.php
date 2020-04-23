@@ -142,19 +142,19 @@ if(isset($_GET['id'])){
 
 	<form name="rediger" id="rediger" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" autocomplete="on" enctype="multipart/form-data">
         <label>Kategori:</label>
-        <input type="text" id="kategori" name="kategori" value="<?php echo $row['kategori']?>">
+        <input type="text" id="kategori" name="kategori" value="<?php echo $row['kategori']?>" required>
         <Lable>Producent:</Lable>
-        <input type="text" id="producent" name="producent" value="<?php echo $row['producent']?>">
+        <input type="text" id="producent" name="producent" value="<?php echo $row['producent']?>" required>
         <Lable>Model:</Lable>
-        <input type="text" id="model" name="model" value="<?php echo $row['model']?>">
+        <input type="text" id="model" name="model" value="<?php echo $row['model']?>" required>
         <lable>Størrelse:</lable>
-        <input type="text" id="storrelse" name="storrelse" value="<?php echo $row['storrelse']?>">
+        <input type="text" id="storrelse" name="storrelse" value="<?php echo $row['storrelse']?>" required>
         <Lable>Beskrivelse:</Lable>
         <input type="text" id="beskrivelse" name="beskrivelse" value="<?php echo $row['beskrivelse']?>">
         <label>Rediger billede:</lable>
         <input type="file" name="file" value="">
         <Lable>Pris:</Lable>
-        <input type="number" min="0,00" max="999999,00" step="1.00" id="pris" name="pris" value="<?php echo $row['pris']?>">
+        <input type="number" min="0,00" max="999999,00" step="1.00" id="pris" name="pris" value="<?php echo $row['pris']?>" required>
 
         <input type="submit" name="rediger" value="Rediger">
         <input type="hidden" name="id" value="<?php echo $id?>">

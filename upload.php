@@ -2,7 +2,7 @@
 // Etablerer forbindelse til serveren
 require_once "connection.php";
 
-  //anvender $_FILES til at hente forskellige informationer fra den uploadese fil
+  //anvender $_FILES til at hente forskellige informationer fra den uploadede fil
   $file = $_FILES['file'];
 
 

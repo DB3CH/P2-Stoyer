@@ -36,7 +36,7 @@ h3{
 h4{
 	font-family: didot, sans-serif;
 	font-size: 38px;
-	font-weight: bold; 
+	font-weight: bold;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -52,7 +52,7 @@ p{
     border-radius: 2px;
     padding: 4px;
     margin-right: 20px;
-   
+
 }
 
 .shoppingcart img{
@@ -183,7 +183,7 @@ p{
 .hero{
 	height: 60vh;
 	width: 100%;
-	
+
 }
 
 .hero p{
@@ -307,7 +307,7 @@ p{
 
 .imagesContainer img{
 	width: 100%;
-	box-shadow: 5px 5px 15px #000; 
+	box-shadow: 5px 5px 15px #000;
 
 }
 
@@ -337,7 +337,7 @@ p{
 	background-color: black;
 	height: 3px;
 	width: 70px;
-	margin: 5em auto 0 auto; 
+	margin: 5em auto 0 auto;
 }
 
 footer{
@@ -397,7 +397,7 @@ label{
 
 .pageNav li{
 	display: inline-block;
-}	
+}
 
 .pageNav a{
 	text-decoration: none;
@@ -628,7 +628,7 @@ label{
 	}
 
 	footer{
-		margin-top: 30px; 
+		margin-top: 30px;
 	}
 
 	footer p{
@@ -639,7 +639,7 @@ label{
 		display: none;
 	}
 
-	
+
 	.scroll{
 		display: none;
 	}
