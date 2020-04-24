@@ -11,7 +11,7 @@ if (!isset($_SESSION["indkobskurv"])) {
 require_once "connection.php";
 
 		//henter id fra det produkt man har valgt
-    $id = $_GET['id'];
+    $id = $_POST["id"];
 
 		//indsætter idet fra de valgte produkt i databasen
     array_push($_SESSION["indkobskurv"], $id);

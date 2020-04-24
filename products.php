@@ -67,17 +67,20 @@ if(isset($_GET['id'])){
 
 			<p>Varenr.:</p>
 			<br>
-			<p><?php echo $row['beskrivelse'] ?></p>
+			<p><?php echo $row['beskrivelse']; ?></p>
 			<br>
-			<p><?php echo $row['storrelse'] ?></p>
+			<p><?php echo $row['storrelse']; ?></p>
       <?php
         }
        ?>
 
+
        <form class="" action="kurv.php" method="post">
-       		<input class="btnProducts"type="button" name="tilfoej" value="Tilføj">
+				 	<input type="text" name="storrelse" Placeholder="Vælg Størrelse">
+					<input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
+       		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj">
        </form>
-	     
+
 
 		</div>
 
