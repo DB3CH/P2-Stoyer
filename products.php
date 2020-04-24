@@ -70,14 +70,15 @@ if(isset($_GET['id'])){
 			<p><?php echo $row['beskrivelse']; ?></p>
 			<br>
 			<p><?php echo $row['storrelse']; ?></p>
-      <?php
+
+        <?php
         }
        ?>
 
 
-       <form class="" action="kurv.php" method="post">
+       <form class="" action="kurv.php" method="POST">
 				 	<input type="text" name="storrelse" Placeholder="Vælg Størrelse">
-					<input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
+					<input type="" name="id" value="<?php echo $row['ID']; ?>">
        		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj">
        </form>
 

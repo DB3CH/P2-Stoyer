@@ -8,6 +8,8 @@ session_start();
 //tjekker om der er en inkøbskurv funktion
 if (isset($_SESSION["indkobskurv"])) {
 
+  print_r($_SESSION["indkobskurv"]);
+
   //foreach loop skriver alt informationen om produkterne i indkøbskurven
   foreach ($_SESSION["indkobskurv"] as $item) {
     $id=$item;
