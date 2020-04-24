@@ -78,7 +78,7 @@ if(isset($_GET['id'])){
 
        <form class="" action="kurv.php" method="POST">
 				 	<input type="text" name="storrelse" Placeholder="Vælg Størrelse">
-					<input type="" name="id" value="<?php echo $row['ID']; ?>">
+					<input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
        		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj">
        </form>
 
