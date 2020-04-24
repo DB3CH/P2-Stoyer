@@ -5,17 +5,6 @@ session_start();
 
 //vælger alt informationen om alle produkter i databasne
 
-
-if (!isset($_POST['bukser']))
-{
-$query = "SELECT*FROM produkttest WHERE kategori='Bukser'";
-$results = mysqli_query($connection,$query);
-
-if(!$results){
-   die("bukser virker ikke" .mysqli_error());
-}
-
-
 $query = "SELECT*FROM produkttest";
 $results = mysqli_query($connection,$query);
 
@@ -23,6 +12,35 @@ $results = mysqli_query($connection,$query);
 if(!$results){
    die("could not query the database" .mysqli_error());
 }
+
+if (isset($_POST['bukser']))
+{
+$query = "SELECT*FROM produkttest WHERE kategori='Bukser'";
+$results = mysqli_query($connection,$query);
+}
+if(!$results){
+   die("bukser virker ikke" .mysqli_error());
+}
+
+if (isset($_POST['kjoler']))
+{
+$query = "SELECT*FROM produkttest WHERE kategori='kjoler'";
+$results = mysqli_query($connection,$query);
+}
+if(!$results){
+   die("bukser virker ikke" .mysqli_error());
+}
+
+if (isset($_POST['sko']))
+{
+$query = "SELECT*FROM produkttest WHERE kategori='sko'";
+$results = mysqli_query($connection,$query);
+}
+if(!$results){
+   die("bukser virker ikke" .mysqli_error());
+}
+
+
 
 
 
@@ -63,11 +81,38 @@ if(!$results){
 
 	</div>
 
+	<form action='shop.php'>
+
+	<input type="submit"  value="vis alt">
+	
+	</form> 
+
 	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
 	<input type="submit" name="bukser"  value="Bukser">
 	
 	</form> 
+
+
+	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+	<input type="submit" name="kjoler"  value="Kjoler">
+	
+	</form> 
+
+
+	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+	<input type="submit" name="sko"  value="Sko">
+	
+	</form> 
+
+
+
+
+
+
+
 
 	<div class="shopSection">
 		<h2>Produkter</h2>
