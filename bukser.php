@@ -4,19 +4,7 @@ session_start();
  require_once 'connection.php';
 
 //vælger alt informationen om alle produkter i databasne
-
-
-if (!isset($_POST['bukser']))
-{
 $query = "SELECT*FROM produkttest WHERE kategori='Bukser'";
-$results = mysqli_query($connection,$query);
-
-if(!$results){
-   die("bukser virker ikke" .mysqli_error());
-}
-
-
-$query = "SELECT*FROM produkttest";
 $results = mysqli_query($connection,$query);
 
 //hvis der ikke er nogle resultater bliver fejlkode skrevet
@@ -63,17 +51,9 @@ if(!$results){
 
 	</div>
 
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="bukser"  value="Bukser">
-	
-	</form> 
-
 	<div class="shopSection">
 		<h2>Produkter</h2>
 		
-
-
 
 
 

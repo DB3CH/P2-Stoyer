@@ -38,6 +38,7 @@ if(isset($_GET['id'])){
 </head>
 
 <body>
+    
 
 <?php
 //While loop skriver alt informationen om produktet fra databasen
