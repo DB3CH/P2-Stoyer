@@ -7,6 +7,13 @@
 </head>
 <body>
 
+	<div class="shoppingcart">
+	<a href="viskurv.php">
+		<img class="shoppingcart" src="shoppingcart.png">
+		<p>0,00 kr.</p>
+	</a>
+	</div>
+	
 	<div class="pageNav">
 
 		<label for="toggle">&#9776;</label>
