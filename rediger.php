@@ -134,15 +134,28 @@ if(isset($_GET['id'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insert  </title>
+	<title>Rediger i <?php echo $row ['model']?></title>
 	<meta charset="utf-8">
 </head>
 
 <body>
 
 	<form name="rediger" id="rediger" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" autocomplete="on" enctype="multipart/form-data">
-        <label>Kategori:</label>
-        <input type="text" id="kategori" name="kategori" value="<?php echo $row['kategori']?>" required>
+       
+  Kategori lige nu er "<?php echo $row ['kategori']?>"
+  <br>
+
+  <input type="radio" required="true" name="kategori" value="Sko">
+  <label for="Sko">Sko</label><br>
+  <input type="radio" name="kategori" value="Kjoler">
+  <label for="Kjoler">Kjole</label><br>
+  <input type="radio" name="kategori" value="Trøjer">
+  <label for="Trøjer">Trøje</label><br>
+  <input type="radio" name="kategori" value="Bukser">
+  <label for="Bukser">Bukser</label><br>
+  <input type="radio" name="kategori" value="Jakker">
+  <label for="Jakker">Jakke</label><br>
+
         <Lable>Producent:</Lable>
         <input type="text" id="producent" name="producent" value="<?php echo $row['producent']?>" required>
         <Lable>Model:</Lable>
