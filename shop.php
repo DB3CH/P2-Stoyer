@@ -13,7 +13,7 @@ if(!$results){
    die("could not query the database" .mysqli_error());
 }
 
-if (isset($_POST['bukser']))
+if (isset($_POST['Bukser']))
 {
 $query = "SELECT*FROM produkttest WHERE kategori='Bukser'";
 $results = mysqli_query($connection,$query);
@@ -22,23 +22,41 @@ if(!$results){
    die("bukser virker ikke" .mysqli_error());
 }
 
-if (isset($_POST['kjoler']))
+if (isset($_POST['Kjoler']))
 {
-$query = "SELECT*FROM produkttest WHERE kategori='kjoler'";
+$query = "SELECT*FROM produkttest WHERE kategori='Kjoler'";
 $results = mysqli_query($connection,$query);
 }
 if(!$results){
    die("bukser virker ikke" .mysqli_error());
 }
 
-if (isset($_POST['sko']))
+if (isset($_POST['Sko']))
 {
-$query = "SELECT*FROM produkttest WHERE kategori='sko'";
+$query = "SELECT*FROM produkttest WHERE kategori='Sko'";
 $results = mysqli_query($connection,$query);
 }
 if(!$results){
    die("bukser virker ikke" .mysqli_error());
 }
+
+if (isset($_POST['Jakker']))
+{
+$query = "SELECT*FROM produkttest WHERE kategori='Jakker'";
+$results = mysqli_query($connection,$query);
+}
+if(!$results){
+   die("bukser virker ikke" .mysqli_error());
+}
+if (isset($_POST['Trøjer']))
+{
+$query = "SELECT*FROM produkttest WHERE kategori='Trøjer'";
+$results = mysqli_query($connection,$query);
+}
+if(!$results){
+   die("bukser virker ikke" .mysqli_error());
+}
+
 
 
 
@@ -89,21 +107,34 @@ if(!$results){
 
 	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
-	<input type="submit" name="bukser"  value="Bukser">
+	<input type="submit" name="Bukser"  value="Bukser">
 	
 	</form> 
 
 
 	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
-	<input type="submit" name="kjoler"  value="Kjoler">
+	<input type="submit" name="Kjoler"  value="Kjoler">
 	
 	</form> 
 
 
 	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
-	<input type="submit" name="sko"  value="Sko">
+	<input type="submit" name="Sko"  value="Sko">
+	
+	</form> 
+
+	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+	<input type="submit" name="Jakker"  value="Jakker">
+	
+	</form> 
+
+
+	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+	<input type="submit" name="Trøjer"  value="Trøjer">
 	
 	</form> 
 

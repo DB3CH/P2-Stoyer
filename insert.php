@@ -35,8 +35,23 @@ if(!isset($_SESSION['login'])){
 <!-- Form hvor data kan indsættes, post sender informationen videre til upload.php, hvor det bliver sat på databasen. -->
 	<form action="upload.php" method="POST" class="container" enctype="multipart/form-data">
         <ul>
-       <li> <label>Kategori:</label>
-        <input type="text" id="kategori" name="kategori" required> </li>
+      
+<li>Kategori</li>
+
+  <input type="radio" name="kategori" value="Sko">
+  <label for="Sko">Sko</label><br>
+  <input type="radio" name="kategori" value="Kjoler">
+  <label for="Kjoler">Kjole</label><br>
+  <input type="radio" name="kategori" value="Trøjer">
+  <label for="Trøjer">Trøje</label><br>
+  <input type="radio" name="kategori" value="Bukser">
+  <label for="Bukser">Bukser</label><br>
+  <input type="radio" name="kategori" value="Jakker">
+  <label for="Jakker">Jakke</label><br>
+
+
+
+
        <li> <Lable>Producent:</Lable>
         <input type="text" id="producent" name="producent" required> </li>
        <li> <Lable>Model:</Lable>
