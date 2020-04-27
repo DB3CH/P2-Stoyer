@@ -46,6 +46,7 @@ VALUES ('$kategori', '$producent', '$fileNameNew', '$storrelse', '$model', '$pri
           move_uploaded_file($fileTmpName, $fileDestination);
           echo "New record created successfully";
           mysqli_close($connection);
+         
           header("location: show.php?uploadsuccess");
       } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($connection);

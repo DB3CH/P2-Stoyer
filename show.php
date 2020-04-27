@@ -61,9 +61,9 @@ $results = mysqli_query($connection,$query);
 if(!$results){
    die("bukser virker ikke" .mysqli_error());
 }
-if (isset($_POST['Trøjer']))
+if (isset($_POST['Trojer']))
 {
-$query = "SELECT*FROM produkttest WHERE kategori='Trøjer'";
+$query = "SELECT*FROM produkttest WHERE kategori='Trojer'";
 $results = mysqli_query($connection,$query);
 }
 if(!$results){
@@ -101,7 +101,7 @@ if(!$results){
 
 <h2>Produkt oversigt</h2>
 
-<form action='shop.php'>
+<form action='show.php'>
 
   <input type="submit"  value="vis alt">
   
@@ -136,7 +136,7 @@ if(!$results){
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
-  <input type="submit" name="Trøjer"  value="Trøjer">
+  <input type="submit" name="Trojer"  value="Trøjer">
   
   </form> 
 
