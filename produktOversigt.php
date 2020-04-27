@@ -116,30 +116,92 @@ if(!$results){
 				
 				<h2 class="page-title">Produktoversigt</h2>
 
-				<table>
-					<thead>
-						<th>SN</th>
-						<th>Produkt navn</th>
-						<th>Produkt nr.</th>
-						<th colspan="2">Handling</th>
-					</thead>
+<form action='produktOversigt.php'>
+
+  <input type="submit"  value="vis alt">
+  
+  </form> 
+
+  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+  <input type="submit" name="Bukser"  value="Bukser">
+  
+  </form> 
+
+
+  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+  <input type="submit" name="Kjoler"  value="Kjoler">
+  
+  </form> 
+
+
+  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+  <input type="submit" name="Sko"  value="Sko">
+  
+  </form> 
+
+  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+  <input type="submit" name="Jakker"  value="Jakker">
+  
+  </form> 
+
+
+  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+  <input type="submit" name="Trojer"  value="Trøjer">
+  
+  </form> 
+
+
+
+
+
+
+		<!-- Table der indeholder alle produkter i databasen -->
+<table>
+  <tr>
+    <th>Katagori</th>
+    <th>Producent</th>
+    <th>Model</th>
+    <th>Billede</th>
+    <th>Pris</th>
+    <th>Beskrivelse</th>
+  </tr>
 
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Six Ames Strik</td>
-							<td>NI115000M-A11</td>
-							<td><a href="#" class="godkend">Rediger</a></td>
-							<td><a href="#" class="afvis">Slet</a></td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Six Ames Buks</td>
-							<td>NI115000M-A12</td>
-							<td><a href="#" class="godkend">Rediger</a></td>
-							<td><a href="#" class="afvis">Slet</a></td>
-						</tr>
-					</tbody>
+
+<?php
+
+  // While loop der kører igennem databasen og echoer de valgte resultater i en tabel
+  while($row = mysqli_fetch_assoc($results)){
+
+
+    echo '<tr <div class="table">';
+
+      echo "<td>".$row['kategori']."</td>";
+      echo "<td>".$row['producent']."</td>";
+      echo "<td>". $row['model']."</td>";
+      echo "<td>"."<img src='billeder/". $row['billede']."'>"."</td>";
+      echo "<td>". $row['pris']. ".kr". "</td>";
+      echo "<td>".$row['beskrivelse']."</td>";
+      ?>
+      <!--"rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
+      <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
+      <td><a href="rediger.php?id=<?php echo $row['ID']?>" class="godkend">Rediger</a></td>
+      <td><a href="delete.php?id=<?php echo $row['ID']?>" class="afvis" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
+      >Slet </a></td>
+   <?php
+
+  }
+  ?>
+</div>
+</table>
+						
+					
+				
 				</table>
 
 			</div>

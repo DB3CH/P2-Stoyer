@@ -142,3 +142,9 @@ input[type=text], select {
 	display: block;
 	padding: 10px;
 }
+
+.table img {
+	width: 70px;
+	height: 70px;
+
+}
