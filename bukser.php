@@ -53,7 +53,7 @@ if(!$results){
 
 	<div class="shopSection">
 		<h2>Produkter</h2>
-		
+
 
 
 
@@ -84,4 +84,7 @@ if(!$results){
 	</footer>
 
 </body>
+<?php
+mysqli_close($connection);
+ ?>
 </html>

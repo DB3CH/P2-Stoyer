@@ -94,3 +94,6 @@ if(!isset($_SESSION['login'])){
 
 </body>
 </html>
+<?php
+mysqli_close($connection);
+ ?>

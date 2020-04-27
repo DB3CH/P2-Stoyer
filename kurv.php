@@ -35,3 +35,7 @@ require_once "connection.php";
   header("location: shop.php");
 
  ?>
+
+ <?php
+ mysqli_close($connection);
+  ?>

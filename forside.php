@@ -121,4 +121,7 @@ if(!$results){
 
 
 </body>
+<?php
+mysqli_close($connection);
+ ?>
 </html>

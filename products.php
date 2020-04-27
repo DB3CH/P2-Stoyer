@@ -95,4 +95,7 @@ if(isset($_GET['id'])){
 	</footer>
 
 </body>
+<?php
+mysqli_close($connection);
+ ?>
 </html>

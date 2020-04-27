@@ -107,53 +107,53 @@ if(!$results){
 		</div>
 
 		<div class="admin-content">
-			
+
 			<div class="button-group">
 				<a href="tilføjProdukt.php" class="btn">Tilføj produkt</a>
 			</div>
 
 			<div class="content">
-				
+
 				<h2 class="page-title">Produktoversigt</h2>
 
 <form action='produktOversigt.php'>
 
   <input type="submit"  value="vis alt">
-  
-  </form> 
+
+  </form>
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Bukser"  value="Bukser">
-  
-  </form> 
+
+  </form>
 
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Kjoler"  value="Kjoler">
-  
-  </form> 
+
+  </form>
 
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Sko"  value="Sko">
-  
-  </form> 
+
+  </form>
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Jakker"  value="Jakker">
-  
-  </form> 
+
+  </form>
 
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Trojer"  value="Trøjer">
-  
-  </form> 
+
+  </form>
 
 
 
@@ -168,7 +168,7 @@ if(!$results){
     <th>Model</th>
     <th>Billede</th>
     <th>Pris</th>
-    
+
   </tr>
 
 					<tbody>
@@ -187,7 +187,7 @@ if(!$results){
       echo "<td>"."<img src='billeder/". $row['billede']."'>"."</td>";
       echo "<td>". $row['pris']. ".kr". "</td>";
 
-      
+
       ?>
       <!--"rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
       <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
@@ -201,9 +201,9 @@ if(!$results){
   ?>
 </div>
 </table>
-						
-					
-				
+
+
+
 				</table>
 
 			</div>
@@ -211,4 +211,7 @@ if(!$results){
 	</div>
 
 </body>
+<?php
+mysqli_close($connection);
+ ?>
 </html>
