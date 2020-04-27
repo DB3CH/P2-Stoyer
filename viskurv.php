@@ -10,7 +10,7 @@ if (isset($_SESSION["indkobskurv"])) {
 
   if (isset($_SESSION["storrelse"])) {
 
-print_r( $_SESSION["storrelse"]);
+
 
 $storrelser = $_SESSION["storrelse"];
 
@@ -92,6 +92,9 @@ if (isset($_POST['ryd'])) {
     <form class="ryd_indkøb" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
         <input type="submit" name="ryd" value="Ryd indkøbskurv">
     </form>
+
+<a href="shop.php">Fortsæt med at handle</a>
+
 
   </body>
 </html>
