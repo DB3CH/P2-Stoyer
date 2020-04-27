@@ -38,7 +38,7 @@ if(!isset($_SESSION['login'])){
       
 <li>Kategori</li>
 
-  <input type="radio" name="kategori" value="Sko">
+  <input type="radio" required="true" name="kategori" value="Sko">
   <label for="Sko">Sko</label><br>
   <input type="radio" name="kategori" value="Kjoler">
   <label for="Kjoler">Kjole</label><br>
