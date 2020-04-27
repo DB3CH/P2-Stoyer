@@ -11,7 +11,4 @@ if (isset($key)) {
   unset($_SESSION["storrelse"][$key]);
   header("location: viskurv.php");
 }
-
-
-
   ?>

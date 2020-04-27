@@ -47,56 +47,47 @@ if(!isset($_SESSION['login'])){
 
 
 			<div class="content">
-				
+
 				<h2 class="page-title">Tilføj bruger</h2>
 
 
 				<div class="form">
   				<!-- Form hvor data kan indsættes, post sender informationen videre til upload.php, hvor det bliver sat på databasen. -->
 	<form action="upload.php" method="POST" class="container" enctype="multipart/form-data">
-  
 
-  <label> Kategori </label>    
-  <br>
-  <input type="radio" required="true" name="kategori" value="Sko">
-  <label for="Sko">Sko</label><br>
-  <input type="radio" name="kategori" value="Kjoler">
-  <label for="Kjoler">Kjole</label><br>
-  <input type="radio" name="kategori" value="Trøjer">
-  <label for="Trøjer">Trøje</label><br>
-  <input type="radio" name="kategori" value="Bukser">
-  <label for="Bukser">Bukser</label><br>
-  <input type="radio" name="kategori" value="Jakker">
-  <label for="Jakker">Jakke</label><br>
 
-  <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+
+  <label for="Kategori">Kategori</label>
+    <select id="kategori" name="kategori" required>
+      <option value="" disabled selected hidden>Vælg kategori...</option>
+      <option value="Sko">Sko</option>
+      <option value="Kjoler">Kjoler</option>
+      <option value="Trojer">Trøjer</option>
+      <option value="Bukser">Bukser</option>
+      <option value="Jakker">Jakker</option>
     </select>
 
 
        <Label>Producent:</Label>
-        <input type="text" id="producent" name="producent" required> 
+        <input type="text" id="producent" name="producent" required>
        <label>Model:</label>
-        <input type="text" id="model" name="model" required> 
+        <input type="text" id="model" name="model" required>
 
        <Label>Størrelse:</Label>
-         <input type="text" id="storrelse" name="storrelse" placeholder="Vi har størrelse..." required> 
+         <input type="text" id="storrelse" name="storrelse" placeholder="Vi har størrelse..." required>
          <Label>Beskrivelse:</Label>
-        <input type="text" id="beskrivelse" name="beskrivelse"> 
+        <input type="text" id="beskrivelse" name="beskrivelse">
         <label>Indsæt billede:</label>
         <input type="file" name="file" value="" required>
         <Label>Pris:</Label>
-        <input type="number" min="0,00" max="999999,00" id="pris" name="pris" required> 
+        <input type="number" min="0,00" max="999999,00" id="pris" name="pris" required>
 
 
         <input class="btn" type="submit" value="Indsæt">
-        
+
     </form>
 </div>
-				
+
 			</div>
 		</div>
 	</div>

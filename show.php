@@ -104,41 +104,41 @@ if(!$results){
 <form action='show.php'>
 
   <input type="submit"  value="vis alt">
-  
-  </form> 
+
+  </form>
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Bukser"  value="Bukser">
-  
-  </form> 
+
+  </form>
 
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Kjoler"  value="Kjoler">
-  
-  </form> 
+
+  </form>
 
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Sko"  value="Sko">
-  
-  </form> 
+
+  </form>
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Jakker"  value="Jakker">
-  
-  </form> 
+
+  </form>
 
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Trojer"  value="Trøjer">
-  
-  </form> 
+
+  </form>
 
 
 
