@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<link rel="stylesheet" type="text/css" href="adminStyle.css">
+</head>
+<body>
+
+
+	<header>
+		<div class="logo">
+			<h1 class="logo-text">Strøyer</h1>
+		</div>
+		<div class="nav">
+			<h1 class="logo-text">Username</h1>
+		</div>
+	</header>
+
+	<div class="admin-wrapper">
+
+		<div class="left-sidebar">
+			<ul>
+				<li><a href="produktOversigt.html">Produktoversigt</a></li>
+				<li><a href="index.html">Igangværende ordrer</a></li>
+				<li><a href="afsluttedeOrdrer.html">Afsluttede ordrer</a></li>
+				<li><a href="#">Admin Konti</a></li>
+			</ul>
+		</div>
+
+		<div class="admin-content">
+
+
+			<div class="content">
+				
+				<h2 class="page-title">Tilføj bruger</h2>
+
+
+				<div class="form">
+  					<form action="/action_page.php">
+    					<label for="beskrivelse">Beskrivelse:</label>
+    					<input type="text" id="beskrivelse" name="beskrivelse" placeholder="Beskrivelse">
+
+    					<label for="mærke">Mærke:</label>
+    					<input type="text" id="Mærke" name="Mærke" placeholder="Mærke">
+
+    					<label for="model">Model:</label>
+    					<input type="text" id="model" name="model" placeholder="Model">
+
+    					<label for="pris">Pris:</label>
+    					<input type="text" id="pris" name="pris" placeholder="Pris">
+
+						<label for="image">Image</label>
+    					<input type="file" id="image" name="image">
+    					
+    					<input type="submit" class="btn" value="Submit">
+
+
+  					</form>
+</div>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

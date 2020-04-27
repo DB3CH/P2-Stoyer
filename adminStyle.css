@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+body{
+	height: 100%;
+}
+
+header{
+	background-color: #01474a;
+	height: 66px;
+}
+
+header .logo{
+	float: left;
+	margin: 12px;
+}
+
+header .nav{
+	float: right;
+	margin: 12px;
+}
+
+.logo-text{
+	color: white;
+}
+
+.admin-wrapper{
+	display: flex;
+	height: 900px;
+}
+
+.admin-wrapper .left-sidebar{
+	flex: 2;
+	background-color: #234a57;
+	height: 100%;
+}
+
+.admin-wrapper .left-sidebar ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.admin-wrapper .left-sidebar ul li{
+	padding: 18px;
+	display: block;
+	border-bottom: 1px solid #004044;
+}
+
+.admin-wrapper .left-sidebar ul li a{
+	color: aliceblue;
+	text-decoration: none;
+}
+
+.admin-wrapper .left-sidebar ul li:hover{
+	background:#004044;
+}
+
+
+.admin-wrapper .admin-content{
+	flex: 8;
+	height: 100%;
+	padding: 40px 100px 100px;
+	overflow-y: scroll; 
+}
+
+.admin-content .page-title{
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1.1rem;
+}
+
+th, td{
+	padding: 15px;
+	text-align: left;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.godkend{
+	color: green;
+	text-decoration: none;
+}
+
+.afvis{
+	color: red;
+	text-decoration: none;
+}
+
+.godkend:hover{
+	text-decoration: underline;
+	opacity: 0.7;
+}
+
+.afvis:hover{
+	text-decoration: underline;
+	opacity: 0.7;
+}
+
+.btn {
+  background-color: #01474a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn:hover{
+	opacity: 0.7;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+.form{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#image{
+	display: block;
+	padding: 10px;
+}
