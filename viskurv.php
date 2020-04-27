@@ -8,10 +8,17 @@ session_start();
 //tjekker om der er en inkøbskurv funktion
 if (isset($_SESSION["indkobskurv"])) {
 
-  
+  if (isset($_SESSION["storrelse"])) {
+
+print_r( $_SESSION["storrelse"]);
+
+$storrelser = $_SESSION["storrelse"];
+
+
+
 
   //foreach loop skriver alt informationen om produkterne i indkøbskurven
-  foreach ($_SESSION["indkobskurv"] as $item) {
+  foreach ($_SESSION["indkobskurv"] as $key => $item) {
     $id=$item;
 
     $query = "SELECT * FROM produkttest WHERE id= $id ";
@@ -38,23 +45,32 @@ if (isset($_SESSION["indkobskurv"])) {
 
           </div>";
         }
-      ?>
+        $storrelse = $storrelser[$key];
+        echo $storrelse;
 
-      <a href="fjernfrakurv.php?id=<?php echo $id;?>"> Fjern dette element </a>
+
+
+      ?>
+      <br>
+      <a href="fjernfrakurv.php?key=<?php echo $key;?>"> Fjern dette element </a>
       <?php
 
+
+
   }
+}
 }else {
   //hvis der ikke er nogle produkter i kurven
   echo "Din kurv er tom";
 }
+
 
 //print_r($_SESSION["indkøbskurv"]);
 
 //tjekker om indkøbskurven skal rydes
 if (isset($_POST['ryd'])) {
   unset($_SESSION['indkobskurv']);;
-
+  unset($_SESSION['storrelse']);;
   header("location: viskurv.php");
 }
 

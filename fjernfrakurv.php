@@ -2,14 +2,16 @@
  //starter en session på siden
  session_start();
 
- //henter idet for det valgte produkt
-$id = $_GET['id'];
 
-//kode der søger gennem session array og sletter de valgte id, hvilket fjerner produktet fra indkøbskurven
-if (($key = array_search($id, $_SESSION["indkobskurv"])) !== false) {
+
+$key = $_GET['key'];
+
+if (isset($key)) {
   unset($_SESSION["indkobskurv"][$key]);
+  unset($_SESSION["storrelse"][$key]);
   header("location: viskurv.php");
 }
+
 
 
   ?>
