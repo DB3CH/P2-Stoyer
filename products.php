@@ -65,7 +65,7 @@ if(isset($_GET['id'])){
 			<h3><?php echo $row ['producent']." ". $row['model']?></h3>
 			<h4><?php echo $row['pris']?> kr.</h4>
 
-			<p>Varenr.:</p>
+			<p>Varenr:<?php echo $row['produktnummer']; ?> </p>
 			<br>
 			<p><?php echo $row['beskrivelse']; ?></p>
 			<br>

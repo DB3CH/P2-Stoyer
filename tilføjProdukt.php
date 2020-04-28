@@ -72,7 +72,6 @@ if(!isset($_SESSION['login'])){
         <input type="text" id="producent" name="producent" required>
        <label>Model:</label>
         <input type="text" id="model" name="model" required>
-
        <Label>Størrelse:</Label>
          <input type="text" id="storrelse" name="storrelse" placeholder="Vi har størrelse..." required>
          <Label>Beskrivelse:</Label>
@@ -81,7 +80,8 @@ if(!isset($_SESSION['login'])){
         <input type="file" name="file" value="" required>
         <Label>Pris:</Label>
         <input type="number" min="0,00" max="999999,00" id="pris" name="pris" required>
-
+         <Label>Produkt nummer:</Label>
+        <input type="text" id="produkt" name="produkt"required>
 
         <input class="btn" type="submit" value="Indsæt">
 

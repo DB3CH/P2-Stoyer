@@ -33,6 +33,7 @@ require_once "connection.php";
   //alt den indtastede information om produktet bliver hentet fra post
   $kategori = htmlentities($_POST['kategori']);
   $producent = htmlentities($_POST['producent']);
+  $produktnummer = htmlentities($_POST['produkt']);
   $model = htmlentities($_POST['model']);
   $storrelse = htmlentities($_POST['storrelse']);
   $beskrivelse = ($_POST['beskrivelse']);
@@ -40,14 +41,14 @@ require_once "connection.php";
 
 
  //sql kode indsætter alt data om produktet og billedenavnet ind på databasen
-$sql = "INSERT INTO produkttest (kategori, producent, billede, storrelse, model, pris, beskrivelse)
-VALUES ('$kategori', '$producent', '$fileNameNew', '$storrelse', '$model', '$pris', '$beskrivelse')";
+$sql = "INSERT INTO produkttest (kategori, producent, produktnummer, billede, storrelse, model, pris, beskrivelse)
+VALUES ('$kategori', '$producent', '$produktnummer', '$fileNameNew', '$storrelse', '$model', '$pris', '$beskrivelse')";
             if (mysqli_query($connection, $sql)) {
           move_uploaded_file($fileTmpName, $fileDestination);
           echo "New record created successfully";
           mysqli_close($connection);
          
-          header("location: show.php?uploadsuccess");
+          header("location: produktOversigt.php?uploadsuccess");
       } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($connection);
   }
