@@ -101,7 +101,7 @@ if(!$results){
 
 	<form action='shop.php'>
 
-	<input type="submit"  value="vis alt">
+		<input type="submit"  value="vis alt">
 
 	</form>
 
