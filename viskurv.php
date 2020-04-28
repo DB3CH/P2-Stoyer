@@ -54,7 +54,7 @@ $storrelser = $_SESSION["storrelse"];
 
 
       ?>
-      
+
       <a href="fjernfrakurv.php?key=<?php echo $key;?>"> Fjern dette element </a>
       <?php
   }
@@ -108,6 +108,9 @@ if (isset($_POST['ryd'])) {
     </form>
 
 <a href="shop.php">Fortsæt med at handle</a>
+
+<a href="info.php">Til Betaling</a>
+
 
 
   </body>
