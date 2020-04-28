@@ -66,7 +66,9 @@ $storrelser = $_SESSION["storrelse"];
 ?>
 <br>
 <?php
-
+if (!isset($_SESSION["pris"])) {
+	$_SESSION["pris"] = 0;
+}
 if ($samletpris==0) {
   echo "0";
 }else {
