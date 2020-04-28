@@ -5,7 +5,8 @@
     <title></title>
   </head>
   <body>
-    <form class="kundeinfo" action="index.html" method="post">
+    <form method=”post” name="info" action="mail.php" class="kundeinfo" enctype="text/plain">
+
       Kontakt information:
       <br>
       Email: <input type="email" name="email" placeholder="Indtast email" required>
