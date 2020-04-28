@@ -32,7 +32,7 @@ require_once "connection.php";
 
 
 		//henviser tilbage til webshoppen
-  header("location: shop.php");
+  header("location: viskurv.php");
 
  ?>
 
