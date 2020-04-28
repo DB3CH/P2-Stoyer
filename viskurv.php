@@ -5,6 +5,7 @@ require_once 'connection.php';
 //starter en session på siden
 session_start();
 
+$samletpris = 0;
 //tjekker om der er en inkøbskurv funktion
 if (isset($_SESSION["indkobskurv"])) {
 
@@ -44,6 +45,8 @@ $storrelser = $_SESSION["storrelse"];
           </form>
 
           </div>";
+
+          $samletpris += $row['pris'];
         }
         $storrelse = $storrelser[$key];
         echo $storrelse;
@@ -51,18 +54,29 @@ $storrelser = $_SESSION["storrelse"];
 
 
       ?>
-      <br>
+      
       <a href="fjernfrakurv.php?key=<?php echo $key;?>"> Fjern dette element </a>
       <?php
-
-
-
   }
 }
 }else {
   //hvis der ikke er nogle produkter i kurven
   echo "Din kurv er tom";
 }
+?>
+<br>
+<?php
+
+if ($samletpris==0) {
+  echo "0";
+}else {
+  if (isset($_SESSION["pris"])) {
+  	$_SESSION["pris"] = $samletpris;
+    echo $samletpris . "kr.";
+  }
+
+}
+
 
 
 //print_r($_SESSION["indkøbskurv"]);
