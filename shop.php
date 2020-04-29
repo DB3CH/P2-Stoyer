@@ -69,12 +69,13 @@ if(!$results){
 <head>
 	<title>Shop</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   	<meta charset="utf-8">
 </head>
 <body>
-	<div class="shoppingcart">
+	<div class="cart">
 	<a href="viskurv.php">
-		<img class="shoppingcart" src="shoppingcart.png">
+		<img class="cart" src="cart.png">
 		<p>0,00 kr.</p>
 	</a>
 	</div>
@@ -86,7 +87,7 @@ if(!$results){
 
 
 		<div class="pageHeader">
-		<a href="index.php"><h1>STRØYER</h1></a>
+		<a href="forside.php"><h1>STRØYER</h1></a>
 		</div>
 
 		<ul class="pageMenu">
@@ -99,45 +100,9 @@ if(!$results){
 
 	</div>
 
-	<form action='shop.php'>
 
-		<input type="submit"  value="vis alt">
-
-	</form>
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Bukser"  value="Bukser">
-
-	</form>
-
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Kjoler"  value="Kjoler">
-
-	</form>
-
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Sko"  value="Sko">
-
-	</form>
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Jakker"  value="Jakker">
-
-	</form>
-
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Trojer"  value="Trøjer">
-
-	</form>
-
+	
+	
 
 
 
@@ -146,8 +111,27 @@ if(!$results){
 
 
 	<div class="shopSection">
-		<h2>Produkter</h2>
 
+
+<div class="kategori">
+
+
+	<form action='shop.php'>
+
+		<input class="kategori-btn" type="submit"  value="Vis alt">
+
+	</form>
+
+	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+	<input class="kategori-btn" type="submit" name="Bukser"  value="Bukser">
+	<input class="kategori-btn" type="submit" name="Kjoler"  value="Kjoler">
+	<input class="kategori-btn" type="submit" name="Sko"  value="Sko">
+	<input class="kategori-btn" type="submit" name="Jakker"  value="Jakker">
+	<input class="kategori-btn" type="submit" name="Trojer"  value="Trøjer">
+	</form>
+
+	</div>
 
 
 

@@ -16,7 +16,9 @@ $pris = $_SESSION['pris'];
     <title></title>
   </head>
   <body>
+
     <form action="ordrerupload.php" method="POST" class="container">
+
 
       Kontakt information:
       <br>
