@@ -99,45 +99,9 @@ if(!$results){
 
 	</div>
 
-	<form action='shop.php'>
 
-		<input type="submit"  value="vis alt">
-
-	</form>
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Bukser"  value="Bukser">
-
-	</form>
-
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Kjoler"  value="Kjoler">
-
-	</form>
-
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Sko"  value="Sko">
-
-	</form>
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Jakker"  value="Jakker">
-
-	</form>
-
-
-	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
-
-	<input type="submit" name="Trojer"  value="Trøjer">
-
-	</form>
-
+	
+	
 
 
 
@@ -146,8 +110,27 @@ if(!$results){
 
 
 	<div class="shopSection">
-		<h2>Produkter</h2>
 
+
+<div class="kategori">
+
+
+	<form action='shop.php'>
+
+		<input class="kategori-btn" type="submit"  value="Vis alt">
+
+	</form>
+
+	<form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+
+	<input class="kategori-btn" type="submit" name="Bukser"  value="Bukser">
+	<input class="kategori-btn" type="submit" name="Kjoler"  value="Kjoler">
+	<input class="kategori-btn" type="submit" name="Sko"  value="Sko">
+	<input class="kategori-btn" type="submit" name="Jakker"  value="Jakker">
+	<input class="kategori-btn" type="submit" name="Trojer"  value="Trøjer">
+	</form>
+
+	</div>
 
 
 
