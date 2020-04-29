@@ -1,5 +1,11 @@
-<?php
-$odre=uniqid();
 
-echo $odre;
- ?>
+<?php
+
+$to_email = 'dbbech@gmail.com';
+$subject = 'Testing PHP Mail';
+$message = 'This mail is sent using the PHP mail function';
+$headers = 'From: noreply @ company . com';
+mail($to_email,$subject,$message,$headers);
+
+echo "yeet";
+?>

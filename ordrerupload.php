@@ -3,7 +3,7 @@
 require_once "connection.php";
 
   //alt den indtastede information om produktet bliver hentet fra post
-  
+
 $email_address = htmlentities ($_POST['email']);
 $navn = htmlentities($_POST['navn']);
 $efternavn = htmlentities ($_POST['efternavn']);
@@ -19,17 +19,13 @@ VALUES ('$email_address', '$navn', '$efternavn', '$adresse', '$postnummer', '$ci
             if (mysqli_query($connection, $sql)) {
           echo "New record created successfully";
           mysqli_close($connection);
-         
+
           header("location: forside.php?uploadsuccess");
       } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 
 
-      }else {
-        //hvis der er fejl i upload skrives fejlkode
-        echo "Der skete en fejl under upload, prøv igen.";
-    }
-  
+      }
 
 
 
