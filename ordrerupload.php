@@ -2,8 +2,8 @@
 // Etablerer forbindelse til serveren
 require_once "connection.php";
 
+if (isset($_POST['submit'])) {
   //alt den indtastede information om produktet bliver hentet fra post
-
 $email_address = htmlentities ($_POST['email']);
 $navn = htmlentities($_POST['navn']);
 $efternavn = htmlentities ($_POST['efternavn']);
@@ -26,6 +26,8 @@ VALUES ('$email_address', '$navn', '$efternavn', '$adresse', '$postnummer', '$ci
 
 
       }
+}
+
 
 
 
