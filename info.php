@@ -1,3 +1,14 @@
+<?php
+session_start();
+$id = $_SESSION['indkobskurv'];
+$storrelse = $_SESSION['storrelse'];
+$pris = $_SESSION['pris'];
+
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -28,8 +39,9 @@
       Telefonnummer: <input type="number" name="telefonnummer" maxlength="8" placeholder="Telefonnummer" equired>
       <br>
       <input type="submit" name="submit" value="Til Betaling">
-
-
+      <input type="hidden" name="id[]" value="<?php echo $id; ?>">
+      <input type="hidden" name="storrelse" value="<?php echo $storrelse; ?>">
+      <input type="hidden" name="pris" value="<?php echo $pris; ?>">
     </form>
   </body>
 </html>

@@ -4,7 +4,7 @@
 
 $email_address = $_POST['email'];
 $navn = $_POST['navn'];
-$efternavn = $_POST['efternavn']
+$efternavn = $_POST['efternavn'];
 $addresse = $_POST['adresse'];
 $postnummer = $_POST['postnummer'];
 $by = $_POST['by'];
