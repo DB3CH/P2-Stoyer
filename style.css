@@ -18,6 +18,7 @@ h1{
 	font-family: 'Barlow', sans-serif;
 	font-size: 70px;
 	color: white;
+	font-weight: 250;
 }
 
 h2{
@@ -90,7 +91,7 @@ p{
 
 .header h1{
 	font-size: 70px;
-	font-family: roboto, sans-serif;
+	font-family: 'Barlow', sans-serif;
 	text-align: center;
 	padding: 0px 0px 25px 0px;
 }
@@ -114,8 +115,9 @@ p{
 	display: block;
 	padding: 0 50px;
 	font-size: 20px;
-	font-family: sans-serif;
+	font-family: 'Barlow', sans-serif;
 	transition: 0.4s;
+
 }
 
 .nav a:hover{
@@ -271,6 +273,8 @@ p{
 
 .flex-2 .flexItem h2{
 	color: black;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 250;
 }
 .flex-2 .flexItem p{
 	margin: 15px 0 30px 0;
@@ -293,6 +297,8 @@ p{
 .imageSection h2{
 	margin-bottom: 0.5em;
 	color: black;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 250;
 }
 
 .imagesContainer{
@@ -322,6 +328,7 @@ p{
 
 .images a{
 	color: black;
+	text-decoration: none;
 }
 
 .imgText{
@@ -380,10 +387,11 @@ label{
 
 .pageHeader h1{
 	font-size: 70px;
-	font-family: roboto, sans-serif;
+	font-family: 'Barlow', sans-serif;
 	text-align: center;
 	padding: 0px 0px 25px 0px;
 	color: black;
+	font-weight: 250;
 }
 
 
@@ -406,8 +414,9 @@ label{
 	display: block;
 	padding: 0 50px;
 	font-size: 20px;
-	font-family: sans-serif;
+	font-family: 'Barlow', sans-serif;
 	transition: 0.4s;
+	font-weight: 200;
 }
 
 .pageNav a:hover{
@@ -471,8 +480,7 @@ label{
 	opacity: 0.5;
 }
 
-.shopSection{
-	text-align: center;
+.shopSection{ 
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 50px;
@@ -483,18 +491,20 @@ label{
 }
 
 .shopText{
-  position: absolute;
   bottom: 8px;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 17px;
-  font-weight: bold;
+  padding: 8px;
   }
 
 form{
   	display: inline-block;
   }
 
+
+.kategori{
+	text-align: center;
+}
 
 .kategori-btn{
 	background-color: transparent;
@@ -503,6 +513,7 @@ form{
 	width: 70px;
 	height: 40px;
 	justify-content: center;
+	font-family: 'Barlow', sans-serif;
 	font-size: 15px;
 	color: #1a1a1a;
 	cursor: pointer;
@@ -516,6 +527,35 @@ form{
 }
 
 /*Products styling*/
+
+.cart{
+  	float: right;
+    border-radius: 2px;
+    padding: 4px;
+    margin-right: 20px;
+
+}
+
+.cart img{
+	height: auto;
+    width: 30px;
+    color: black;
+}
+
+.cart:hover{
+	opacity: 0.7;
+}
+
+.cart a{
+	text-decoration: none;
+	color: black;
+	float: right;
+}
+
+.cart p{
+	font-size: 15px;
+}
+
 
 /*Om os styling*/
 
@@ -562,6 +602,28 @@ form{
 	border-style: none;
 
 }
+
+
+/*Kurv styling*/
+
+.content-wrapper{
+	display: flex;
+	height: 100%;
+}
+
+.content-wrapper .left-content{
+	flex: 2;
+	height: 100%;
+	border: 1px solid green;
+}
+
+
+.content-wrapper .right-content{
+	flex: 8;
+	height: 100%;
+	border: 1px solid red;
+}
+
 
 
 .btnProducts:hover{
