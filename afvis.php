@@ -18,12 +18,8 @@ if(isset($_GET['id'])){
     }
 }
 ?>
-  <?php
-    //While loop skriver alt informationen om produktet fra databasen
-    $result = mysqli_query($connection,$query);
-    while($row = mysqli_fetch_assoc($result)){
-    ?>
-
+ 
+ 
 
 <!DOCTYPE html>
 <html>
@@ -57,9 +53,6 @@ if(isset($_GET['id'])){
       <textarea rows="4" cols="50" name="hvorfor" placeholder="Fortæl kunden hvorfor orderen blev afvist"></textarea>
       <br>
       <input type="submit" value="Send mail">
-<?php
-      }
-      ?>
 
   </body>
 </html>
