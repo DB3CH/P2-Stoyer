@@ -16,7 +16,7 @@ $pris = $_SESSION['pris'];
     <title></title>
   </head>
   <body>
-    <form method=”post” name="info" action="fakemobilepay.php" class="kundeinfo" enctype="text/plain">
+    <form method=”post” name="info" action="ordrerupload.php" class="kundeinfo" enctype="text/plain">
 
       Kontakt information:
       <br>
@@ -32,7 +32,7 @@ $pris = $_SESSION['pris'];
       <br>
       postnummer: <input type="number" maxlength="4" name="postnummer" placeholder="Postnummer" required>
       <br>
-      By: <input type="text" name="by" placeholder="By" required>
+      By: <input type="text" name="city" placeholder="By" required>
       <br>
       Land: <input type="text" name="land" placeholder="Land" required>
       <br>
