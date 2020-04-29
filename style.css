@@ -556,6 +556,18 @@ form{
 	font-size: 15px;
 }
 
+.vælg-størrelse{
+	margin-bottom: 25px;
+	border: 1px solid black;
+	color: black;
+	padding: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
 
 /*Om os styling*/
 
@@ -602,33 +614,75 @@ form{
 	border-style: none;
 
 }
+.btnProducts:hover{
+	opacity: 0.8;
+}
 
 
 /*Kurv styling*/
 
-.content-wrapper{
+.products-container{
 	display: flex;
-	height: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-bottom: 100px;
+	max-width: 650px;
+	justify-content: space-around;
+	margin: 0 auto;	
+	margin-top: 50px;
 }
 
-.content-wrapper .left-content{
-	flex: 2;
-	height: 100%;
-	border: 1px solid green;
+.product-header{
+	width: 100%;
+	max-width: 650px;
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 2px solid lightgrey;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+.product-title{
+	width: 45%
+}
+
+.price{
+	width: 15%;
+	display: flex;
+	align-items: center;
+}
+
+.quantity{
+	width: 30%;
+	display: flex;
+	align-items: center;
+}
+
+.total{
+	width: 10%;
+	display: flex;
+	align-items: center;
+}
+
+.product{
+	width: 45%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.products{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.products img{
+	width: 75px;
 }
 
 
-.content-wrapper .right-content{
-	flex: 8;
-	height: 100%;
-	border: 1px solid red;
-}
-
-
-
-.btnProducts:hover{
-	opacity: 0.8;
-}
 
 
 @media screen and (max-width: 1600px) {
