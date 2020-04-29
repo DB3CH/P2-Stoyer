@@ -16,7 +16,7 @@ $pris = $_SESSION['pris'];
     <title></title>
   </head>
   <body>
-    <form method=”post” name="info" action="mail.php" class="kundeinfo" enctype="text/plain">
+    <form method=”post” name="info" action="fakemobilepay.php" class="kundeinfo" enctype="text/plain">
 
       Kontakt information:
       <br>
