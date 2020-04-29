@@ -7,7 +7,7 @@ require_once "connection.php";
 $email_address = htmlentities ($_POST['email']);
 $navn = htmlentities($_POST['navn']);
 $efternavn = htmlentities ($_POST['efternavn']);
-$addresse = htmlentities($_POST['adresse']);
+$adresse = htmlentities($_POST['adresse']);
 $postnummer =htmlentities ($_POST['postnummer']);
 $city = htmlentities($_POST['city']);
 $land =htmlentities ($_POST['land']);

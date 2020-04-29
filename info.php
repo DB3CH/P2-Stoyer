@@ -16,7 +16,7 @@ $pris = $_SESSION['pris'];
     <title></title>
   </head>
   <body>
-    <form method=”post” name="info" action="ordrerupload.php" class="kundeinfo" enctype="text/plain">
+    <form action="ordrerupload.php" method="POST" class="container">
 
       Kontakt information:
       <br>
@@ -38,7 +38,7 @@ $pris = $_SESSION['pris'];
       <br>
       Telefonnummer: <input type="number" name="telefonnummer" maxlength="8" placeholder="Telefonnummer" equired>
       <br>
-      <input type="submit" name="submit" value="Til Betaling">
+      <input type="submit" value="Til Betaling">
       <input type="hidden" name="id[]" value="<?php echo $id; ?>">
       <input type="hidden" name="storrelse" value="<?php echo $storrelse; ?>">
       <input type="hidden" name="pris" value="<?php echo $pris; ?>">

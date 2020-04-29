@@ -26,7 +26,7 @@ if(isset($_POST['but_submit'])){
 
             //Starter en session med uname, som viser de andre sider at man er logget ind
             $_SESSION['login'] = $uname;
-            header('Location: show.php');
+            header('Location: produktOversigt.php');
 
         //Hvis der ikke er match med databsen bliver der skrevet en fejl
         }else{
