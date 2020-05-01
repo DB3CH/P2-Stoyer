@@ -87,6 +87,7 @@ if ($samletpris==0) {
 if (isset($_POST['ryd'])) {
   unset($_SESSION['indkobskurv']);;
   unset($_SESSION['storrelse']);;
+  unset($_SESSION['pris']);;
   header("location: viskurv.php");
 }
 
