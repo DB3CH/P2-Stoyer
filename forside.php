@@ -48,7 +48,7 @@ if(!$results){
 		<input type="checkbox" id="toggle">
 
 		<div class="header">
-		<a href="¨forside.php"><h1>STRØYER</h1></a>
+		<a href="forside.php"><h1>STRØYER</h1></a>
 		</div>
 		<ul class="menu">
 			<li><a href="shop.php">Shop</a></li>
