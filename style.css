@@ -830,6 +830,15 @@ form{
 		padding: 30px;
 	}
 
+	.kategori{
+		padding-top: 100px;
+	}
+
+	.kategori-btn{
+		margin-left: 0px;
+		width: 55px;
+	}
+
 	#toggle:checked ~ .menu{
 		display: block;
 	}
@@ -837,6 +846,8 @@ form{
 	#toggle:checked ~ .pageMenu{
 		display: block;
 	}
+
+
 
 
 }

@@ -24,11 +24,18 @@ if(isset($_GET['id'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Product</title>
+	<title>Shop</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   	<meta charset="utf-8">
 </head>
 <body>
+	<div class="cart">
+	<a href="viskurv.php">
+		<img class="cart" src="cart.png">
+		<p>0,00 kr.</p>
+	</a>
+	</div>
 
 	<div class="pageNav">
 
@@ -37,7 +44,7 @@ if(isset($_GET['id'])){
 
 
 		<div class="pageHeader">
-		<a href="index.php"><h1>STRØYER</h1></a>
+		<a href="forside.php"><h1>STRØYER</h1></a>
 		</div>
 
 		<ul class="pageMenu">
