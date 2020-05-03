@@ -28,8 +28,6 @@ if(!$results){
 
 
 
-
-</div>
 	<div class="shoppingcart">
 	<a href="viskurv.php">
 		<img class="shoppingcart" src="shoppingcart.png">
@@ -54,7 +52,7 @@ if(!$results){
 			<li><a href="shop.php">Shop</a></li>
 			<li><a href="trends.php">Trends</a></li>
 			<li><a href="omOs.php">Om os</a></li>
-			<li><a href="#">Kontakt</a></li>
+			<li><a href="contact.php">Kontakt</a></li>
 		</ul>
 		<hr class="navLine">
 	</div>
