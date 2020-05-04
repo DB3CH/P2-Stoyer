@@ -861,6 +861,11 @@ input[type=number], select {
 		padding: 30px;
 	}
 
+	.icons{
+		display: none;
+	}
+
+
 	.pageHeader{
 		display: none;
 	}
@@ -898,7 +903,6 @@ input[type=number], select {
 	#toggle:checked ~ .pageMenu{
 		display: block;
 	}
-
 
 
 
