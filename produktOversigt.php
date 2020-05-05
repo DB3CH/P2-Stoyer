@@ -99,7 +99,7 @@ if(!$results){
 
 		<div class="left-sidebar">
 			<ul>
-				<li><a href="produktOversigt.html">Produktoversigt</a></li>
+				<li><a href="produktOversigt.php">Produktoversigt</a></li>
 				<li><a href="ordrer.php">Igangværende ordrer</a></li>
 				<li><a href="afsluttedeOrdrer.html">Afsluttede ordrer</a></li>
 				<li><a href="#">Admin Konti</a></li>
