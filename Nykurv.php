@@ -14,6 +14,13 @@ if (isset($_SESSION["indkobskurv"])) {
 
 
 $storrelser = $_SESSION["storrelse"];
+
+foreach ($_SESSION["indkobskurv"] as $key => $item) {
+  $id=$item;
+
+  $query = "SELECT * FROM produkttest WHERE id= $id ";
+  $result = mysqli_query($connection,$query);
+
 ?>
 
 
@@ -86,46 +93,7 @@ $storrelser = $_SESSION["storrelse"];
     <div class="btn-kurv">Slet</div>
 
 
-  </div>
-   <div class="item">
-
-    <div class="image">
-      <img src="test.jpg" alt="" />
-    </div>
-
-    <div class="description">
-      <span>Common Projects</span>
-      <span>Bball High</span>
-      <span>White</span>
-    </div>
-
-
-    <div class="price">$549</div>
-
-    <div class="btn-kurv">Slet</div>
-
-
-  </div>
-  <div class="item">
-
-    <div class="image">
-      <img src="test.jpg" alt="" />
-    </div>
-
-    <div class="description">
-      <span>Common Projects</span>
-      <span>Bball High</span>
-      <span>White</span>
-    </div>
-
-
-    <div class="price">$549</div>
-
-    <div class="btn-kurv">Slet</div>
-
-
-  </div>
-
+  
 
 
   <div class="item">
