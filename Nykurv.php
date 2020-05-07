@@ -84,7 +84,7 @@ while($row = mysqli_fetch_assoc($result)){
  echo "<div class='item'>";
 
    echo "<div class='image'>";
-        echo "<img src='billeder/". $row['billede']."/>";
+        echo "<img src='billeder/" .  $row['billede'] . "'>";
      echo "</div>";
 
     echo "<div class='description'>";
