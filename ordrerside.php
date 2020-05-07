@@ -71,8 +71,8 @@ if(isset($_GET['id'])){
         }
        ?>
        <br>
-      <td><a href="afvis.php?id=<?php echo $row['id']?>" class="godkend">afvis </a></td>
-    
+        <td><a href="afvis.php?id=<?php echo $row['id']?>" class="afvis" onclick="return confirm ('Husk at sende mail til dem')"
+      >Afvis </a></td>
 
 
 

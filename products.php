@@ -82,7 +82,7 @@ if(isset($_GET['id'])){
 			<br>
 			<p><?php echo $row['beskrivelse']; ?></p>
 			<br>
-			<p><?php echo $row['storrelse']; ?></p>
+			<p>Vi har størrelse<?php echo $row['storrelse']; ?></p>
 
         <?php
         $id=$row['ID'];

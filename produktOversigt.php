@@ -91,7 +91,7 @@ if(!$results){
 			<h1 class="logo-text">Strøyer</h1>
 		</div>
 		<div class="nav">
-			<h1 class="logo-text">Username</h1>
+			<h1 class="logo-text"> <a href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
 		</div>
 	</header>
 
@@ -102,7 +102,7 @@ if(!$results){
 				<li><a href="produktOversigt.php">Produktoversigt</a></li>
 				<li><a href="ordrer.php">Igangværende ordrer</a></li>
 				<li><a href="afsluttedeOrdrer.html">Afsluttede ordrer</a></li>
-				<li><a href="#">Admin Konti</a></li>
+				
 			</ul>
 		</div>
 
@@ -126,30 +126,19 @@ if(!$results){
 
   <input type="submit" name="Bukser"  value="Bukser">
 
-  </form>
-
-
-  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+ 
 
   <input type="submit" name="Kjoler"  value="Kjoler">
 
-  </form>
 
-
-  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Sko"  value="Sko">
 
-  </form>
 
-  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
   <input type="submit" name="Jakker"  value="Jakker">
 
-  </form>
-
-
-  <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
+ 
 
   <input type="submit" name="Trojer"  value="Trøjer">
 
@@ -194,7 +183,7 @@ if(!$results){
       <!--"rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
       <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
       <td><a href="products.php?id=<?php echo $row['ID']?>" class="godkend">Vis </a></td>
-      <td><a href="rediger.php?id=<?php echo $row['ID']?>" class="godkend">Rediger</a></td>
+      <td><a href="redigertoj.php?id=<?php echo $row['ID']?>" class="godkend">Rediger</a></td>
       <td><a href="delete.php?id=<?php echo $row['ID']?>" class="afvis" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
       >Slet </a></td>
    <?php

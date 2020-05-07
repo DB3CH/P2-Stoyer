@@ -123,8 +123,7 @@ if(!$results){
       <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
       <td><a href="ordrerside.php?id=<?php echo $row['id']?>" class="godkend">vis </a></td>
       <td><a href="rediger.php?id=<?php echo $row['id']?>" class="godkend">Godkend</a></td>
-      <td><a href="afvisordrer.php?id=<?php echo $row['id']?>" class="afvis" onclick="return confirm ('Er du sikker på du vil slette <?php echo $row['model']?>?')"
-      >Afvis </a></td>
+     
    <?php
 
   }
