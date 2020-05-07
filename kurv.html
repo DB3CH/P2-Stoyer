@@ -1,3 +1,23 @@
+<?php
+//henter information fra connection.php, for at skabe kontakt til databasen
+require_once 'connection.php';
+
+//starter en session på siden
+session_start();
+
+$samletpris = 0;
+//tjekker om der er en inkøbskurv funktion
+if (isset($_SESSION["indkobskurv"])) {
+
+  if (isset($_SESSION["storrelse"])) {
+
+
+
+$storrelser = $_SESSION["storrelse"];
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +30,13 @@
 	<div class="cart">
 	<a href="viskurv.php">
 		<img class="cart" src="cart.png">
-		<p>0,00 kr.</p>
+    <?php
+    if (isset($_SESSION["pris"])) {
+      echo "<p>". $_SESSION["pris"]. " kr." ."</p>";
+  }else {
+    echo "<p>"."0 kr."."</p>";
+  }
+     ?>
 	</a>
 	</div>
 
@@ -40,21 +66,21 @@
   <div class="title">
     Kurv
   </div>
- 
+
   <!-- Product #1 -->
   <div class="item">
-    
+
     <div class="image">
       <img src="test.jpg" alt="" />
     </div>
- 
+
     <div class="description">
       <span>Common Projects</span>
       <span>Bball High</span>
       <span>White</span>
     </div>
- 
- 
+
+
     <div class="price">$549</div>
 
     <div class="btn-kurv">Slet</div>
@@ -62,48 +88,48 @@
 
   </div>
    <div class="item">
-    
+
     <div class="image">
       <img src="test.jpg" alt="" />
     </div>
- 
+
     <div class="description">
       <span>Common Projects</span>
       <span>Bball High</span>
       <span>White</span>
     </div>
- 
- 
+
+
     <div class="price">$549</div>
 
     <div class="btn-kurv">Slet</div>
 
-    
+
   </div>
   <div class="item">
-    
+
     <div class="image">
       <img src="test.jpg" alt="" />
     </div>
- 
+
     <div class="description">
       <span>Common Projects</span>
       <span>Bball High</span>
       <span>White</span>
     </div>
- 
- 
+
+
     <div class="price">$549</div>
 
     <div class="btn-kurv">Slet</div>
 
-    
+
   </div>
 
-  
+
 
   <div class="item">
-    
+
     <div class="total-price">Totalpris $549</div>
 
    	<div class="btn-kurv-afslut">Shop videre</div>
@@ -112,4 +138,3 @@
 
   </div>
  </div>
-  
