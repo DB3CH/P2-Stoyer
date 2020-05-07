@@ -15,11 +15,6 @@ if (isset($_SESSION["indkobskurv"])) {
 
 $storrelser = $_SESSION["storrelse"];
 
-foreach ($_SESSION["indkobskurv"] as $key => $item) {
-  $id=$item;
-
-  $query = "SELECT * FROM produkttest WHERE id= $id ";
-  $result = mysqli_query($connection,$query);
 
 ?>
 
@@ -74,26 +69,49 @@ foreach ($_SESSION["indkobskurv"] as $key => $item) {
     Kurv
   </div>
 
-  <!-- Product #1 -->
-  <div class="item">
+<?php
+foreach ($_SESSION["indkobskurv"] as $key => $item) {
+  $id=$item;
 
-    <div class="image">
-      <img src="test.jpg" alt="" />
-    </div>
+  $query = "SELECT * FROM produkttest WHERE id= $id ";
+  $result = mysqli_query($connection,$query);
 
-    <div class="description">
-      <span>Common Projects</span>
-      <span>Bball High</span>
-      <span>White</span>
-    </div>
+while($row = mysqli_fetch_assoc($result)){
 
 
-    <div class="price">$549</div>
 
-    <div class="btn-kurv">Slet</div>
+  //<!-- Product #1 -->
+ echo "<div class='item'>";
+
+   echo "<div class='image'>";
+        echo "<img src='billeder/". $row['billede']."/>";
+     echo "</div>";
+
+    echo "<div class='description'>";
+    echo "<span>" . $row['producent'] . "</span>";
+     echo "<span>" . $row['model'] . "</span>";
+       echo "<span>" . $row['kategori'] . "</span>";
+    echo "</div>";
+    $samletpris += $row['pris'];
 
 
-  
+    echo "<div class='price'>" . $row['pris'] . "</div>";
+    }
+
+    echo "<div class='btn-kurv'>Slet</div>";
+  echo "</div>";
+
+?>
+
+<?php
+
+}
+}
+}else {
+//hvis der ikke er nogle produkter i kurven
+echo "Din kurv er tom";
+}
+ ?>
 
 
   <div class="item">
@@ -105,4 +123,7 @@ foreach ($_SESSION["indkobskurv"] as $key => $item) {
    	<div class="btn-kurv-afslut">Gå til kassen</div>
 
   </div>
- </div>
+
+  <?php
+  mysqli_close($connection);
+   ?>
