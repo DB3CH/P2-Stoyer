@@ -90,7 +90,7 @@ while($row = mysqli_fetch_assoc($result)){
     echo "<div class='description'>";
     echo "<span>" . $row['producent'] . "</span>";
      echo "<span>" . $row['model'] . "</span>";
-       echo "<span>" . $row['kategori'] . "</span>";
+       echo "<span>" . $storrelser[$key] . "</span>";
     echo "</div>";
     $samletpris += $row['pris'];
 
@@ -98,7 +98,7 @@ while($row = mysqli_fetch_assoc($result)){
     echo "<div class='price'>" . $row['pris'] . "</div>";
     }
 
-    echo "<div class='btn-kurv'>Slet</div>";
+    echo "<div class='btn-kurv'> <a href='fjernfrakurv.php?key=<$key'> Slet </a> </div>";
   echo "</div>";
 
 ?>
