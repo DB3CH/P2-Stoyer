@@ -65,12 +65,12 @@ session_start();
 		<div class="flexItem">
 			<h3>Send os en besked</h3>
 
-  <form action="/action_page.php">
-    <input type="text" id="fname" name="firstname" placeholder="Fornavn:">
+  <form action="forside.php">
+    <input type="text" id="fname" name="firstname" placeholder="Fornavn:" required="true">
 
-    <input type="text" id="lname" name="lastname" placeholder="Efternavn:">
+    <input type="text" id="lname" name="lastname" placeholder="Efternavn:" required="true">
 
-    <input type="text" id="email" name="email" placeholder="Email:">
+    <input type="text" id="email" name="email" placeholder="Email:" required="true">
 
     
 

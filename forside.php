@@ -80,7 +80,9 @@ if(!$results){
 		<div class="flexItem flexText">
 			<h2>Placeret centralt i Gravensgade</h2>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet.</p>
+			<p>Velkommen til Butik Strøyers webshop! 
+Butik Strøyer er en tøjbutik, hvor man blandt andet kan finde lækkert designertøj til kvinder, accessories, sko, samt smykker. Vi finder og udvælger løbende nye og spændende varer i og udenfor Danmark. Alle vores styles er håndplukkede, hvilket giver vores kunder rig mulighed for at sammensætte en helt unik garderobe.
+</p>
 
     	<a href="omOs.php" class="btnTrends">Se her</a>
 		</div>
