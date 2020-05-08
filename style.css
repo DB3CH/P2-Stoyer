@@ -731,7 +731,6 @@ form{
 
 .btn-kurv-afslut{
 	background-color: white;
-	text-decoration: none;
 	font-weight: 500;
 	display: flex;
 	align-items: center;
@@ -748,6 +747,11 @@ form{
 	margin-left: 25%;
 	margin-top: 35px;
 	color: #43484D;
+}
+
+.btn-kurv-afslut a{
+	text-decoration: none;
+	color: black;
 }
 
 .btn-kurv-afslut:hover{
