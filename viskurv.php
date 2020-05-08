@@ -5,15 +5,7 @@ require_once 'connection.php';
 //starter en session på siden
 session_start();
 
-$samletpris = 0;
-//tjekker om der er en inkøbskurv funktion
-if (isset($_SESSION["indkobskurv"])) {
 
-  if (isset($_SESSION["storrelse"])) {
-
-
-
-$storrelser = $_SESSION["storrelse"];
 
 
 ?>
@@ -70,6 +62,16 @@ $storrelser = $_SESSION["storrelse"];
   </div>
 
 <?php
+$samletpris = 0;
+//tjekker om der er en inkøbskurv funktion
+if (isset($_SESSION["indkobskurv"])) {
+
+  if (isset($_SESSION["storrelse"])) {
+
+
+
+$storrelser = $_SESSION["storrelse"];
+
 foreach ($_SESSION["indkobskurv"] as $key => $item) {
   $id=$item;
 
