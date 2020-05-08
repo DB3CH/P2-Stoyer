@@ -1,3 +1,10 @@
+<?php
+//starter en session på siden
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +18,7 @@
 	<div class="cart">
 	<a href="viskurv.php">
 		<img class="cart" src="cart.png">
-		<?php
+		 <?php
     if (isset($_SESSION["pris"])) {
       echo "<p>". $_SESSION["pris"]. " kr." ."</p>";
   }else {
