@@ -57,7 +57,7 @@ if(isset($_GET['id'])){
 			<li><a href="shop.php">Shop</a></li>
 			<li><a href="trends.php">Trends</a></li>
 			<li><a href="omOs.php">Om os</a></li>
-			<li><a href="#">Kontakt</a></li>
+			<li><a href="contact.php">Kontakt</a></li>
 		</ul>
 		<hr class="navLinePage">
 

@@ -68,14 +68,14 @@ if(!$results){
 				<p>SCROLL</p>
 		</div>
 		<div class="heroImage">
-			<img src="hero.jpg">
+			<img src="forsidepic2.jpg">
 		</div>
 
 	</div>
 	<div class="flex-2">
 
 		<div class="flexItem">
-			<img src="group2.png" class="mobileHide">
+			<img src="stroyerbutik.jpg" class="mobileHide">
 		</div>
 		<div class="flexItem flexText">
 			<h2>Placeret centralt i Gravensgade</h2>
