@@ -91,7 +91,7 @@ if(!$results){
 			<h1 class="logo-text">Strøyer</h1>
 		</div>
 		<div class="nav">
-			<h1 class="logo-text"> <a href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
+			<h1 class="logo-text" > <a href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
 		</div>
 	</header>
 

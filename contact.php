@@ -51,6 +51,8 @@ session_start();
 	<div class="flex-2">
 		<div class="flexItem flexText">
 			<h3>Kontakt os</h3>
+			<p>Telefon: 27 62 13 90</p>
+			<p>Mail: Butikstrøyer@strøyer.dk</p>
 			<h5>Åbningstider:</h5>
 			<p>Søndag LUKKET</p>
 			<p>Mandag 10 - 17:30</p>
