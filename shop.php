@@ -152,7 +152,11 @@ if(!$results){
 
 			  	?>
 
-						<div class="images"><a href="products.php?id=<?php echo $row['ID']?>"> <?php echo "<img src='billeder/". $row['billede']."'>";?><div class="shopText"><?php echo $row ['producent']." ". $row['model']?><br><?php echo $row ['pris']?> Kr.</div></a></div>
+						<div class="images"><a href="products.php?id=<?php echo $row['ID']?>">
+             <?php echo "<img src='billeder/". $row['billede']."'>";?>
+             <div class="shopText"><?php echo $row ['producent']." ". $row['model']?>
+              <br><?php echo $row ['pris']?> Kr.
+            </div></a></div>
 
 
 
