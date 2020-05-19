@@ -144,7 +144,7 @@ if(isset($_GET['id'])){
 			<h1 class="logo-text">Strøyer</h1>
 		</div>
 		<div class="nav">
-			<h1 class="logo-text"> <a href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
+			<h1 class="logo-text"> <a class="logo-text" href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
 		</div>
 	</header>
 
@@ -201,7 +201,7 @@ if(isset($_GET['id'])){
         <Lable>Pris:</Lable>
         <input type="number" min="0,00" max="999999,00" step="1.00" id="pris" name="pris" value="<?php echo $row['pris']?>" required>
 
-        <input type="submit" name="rediger" value="Rediger">
+        <input class="btn" type="submit" name="rediger" value="Rediger">
         <input type="hidden" name="id" value="<?php echo $id?>">
     
     </form>

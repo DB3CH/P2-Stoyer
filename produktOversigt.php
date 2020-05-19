@@ -91,7 +91,7 @@ if(!$results){
 			<h1 class="logo-text">Strøyer</h1>
 		</div>
 		<div class="nav">
-			<h1 class="logo-text" > <a href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
+			<h1 class="logo-text" > <a class="logo-text" href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
 		</div>
 	</header>
 
@@ -116,33 +116,25 @@ if(!$results){
 
 				<h2 class="page-title">Produktoversigt</h2>
 
-<form action='produktOversigt.php'>
+<div class="kategori">
 
-  <input type="submit"  value="vis alt">
+
+  <form action='produktOversigt.php.php'>
+
+    <input class="kategori-btn" type="submit"  value="Vis alt">
 
   </form>
 
   <form method="POST" action='<?php echo $_SERVER['PHP_SELF']?>'>
 
-  <input type="submit" name="Bukser"  value="Bukser">
-
- 
-
-  <input type="submit" name="Kjoler"  value="Kjoler">
-
-
-
-  <input type="submit" name="Sko"  value="Sko">
-
-
-
-  <input type="submit" name="Jakker"  value="Jakker">
-
- 
-
-  <input type="submit" name="Trojer"  value="Trøjer">
-
+  <input class="kategori-btn" type="submit" name="Bukser"  value="Bukser">
+  <input class="kategori-btn" type="submit" name="Kjoler"  value="Kjoler">
+  <input class="kategori-btn" type="submit" name="Sko"  value="Sko">
+  <input class="kategori-btn" type="submit" name="Jakker"  value="Jakker">
+  <input class="kategori-btn" type="submit" name="Trojer"  value="Trøjer">
   </form>
+
+  </div>
 
 
 

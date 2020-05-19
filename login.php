@@ -45,22 +45,27 @@ if(isset($_POST['but_submit'])){
 <link rel="stylesheet" type="text/css" href="loginstyle.css">
 </head>
 <body>
-<div class="bg-billede">
+<div class="login-page">
+    <div class="form">
+        <h2>Log In</h2>
     <form method="post" action="" class="loginform">
-        <div id="div_login">
-
-            <div>
-                <input type="text" class="textbox" id="uname" name="uname" placeholder="Admin" />
+        
+        <div class="brugernavn">
+            <label for="brugernavn">Brugernavn</label>
+            <input type="text" class="textbox" id="uname" name="uname" placeholder="Brugernavn"/>
             </div>
-            <div>
-                <input type="password" class="textbox" id="txt_uname" name="pwd" placeholder="Kode"/>
+            <div class="pass">
+                <label for="pass">Password</label>
+                <input type="password" class="textbox" id="txt_uname" name="pwd" placeholder="Password"/>
             </div>
-            <div>
+            <div class="btn">
                 <input type="submit" value="Log ind" name="but_submit" id="but_submit" />
             </div>
-        </div>
+        
     </form>
 </div>
+</div>
+
 
 
 </body>

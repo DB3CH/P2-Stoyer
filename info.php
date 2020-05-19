@@ -19,16 +19,14 @@ $pris = $_SESSION['pris'];
   </head>
   <body>
 
-
-
+      <div class="form-wrapper">
+      <div class="form">
     <form action="ordrerupload.php" method="POST" class="container">
 
 
-      <label for="kontaktInformation">Kontakt information:</label>
+      <h2>Leverings oplysninger:</h2>
 
       <label for="email">Email:<input type="email" name="email" placeholder="Indtast email" required></label>
-
-      <label for="leveringsOplysninger">Leverings oplysninger:</label>
       
       <label for="navn">Navn:<input type="text" name="navn" placeholder="Indtast navn" required></label>
       
@@ -49,5 +47,7 @@ $pris = $_SESSION['pris'];
       <input type="hidden" name="storrelse" value="<?php echo $storrelse; ?>">
       <input type="hidden" name="pris" value="<?php echo $pris; ?>">
     </form>
+  </div>
+</div>
   </body>
 </html>
