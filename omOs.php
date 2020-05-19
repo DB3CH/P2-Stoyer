@@ -19,7 +19,7 @@ session_start();
   }else {
     echo "<p>"."0 kr."."</p>";
   }
-     ?>
+    ?>
 	</a>
 	</div>
 
@@ -46,7 +46,7 @@ session_start();
 	<div class="flex-2">
 		<div class="flexItem flexText">
 			<h2>Placeret centralt i Gravensgade</h2>
-			<p> Butik Strøyer ligger i Aalborg midtby, i en af de hyggeligste og ældste gader. Der er hyggelig atmosfære og unikke muligheder for shopping til alle aldre. Butik Strøyer er eget af ægteparret Kirsten og Allan, der tilsammen startede butikken i 2006. Deres version har været at starte en tøjbutik til den stilsikre kvinde, der ønsker et stilsikkert design, men samtidig også med nogle detaljer, som gør tøjet unikt og lidt eksperimenterende. Butikken fører kendte danske mærker, der har fokus på høj kvalitet og lækkert materiale. I butikken møder du oftest den ene af indehaverne, Kirsten, som står klar til at give inspiration og gode råd, til at opnå det komplette outfit. Den samme rådgivning og inspiration får du også på denne webshop, der emmer af inspiration og gode råd til, hvordan du opnår det perfekte outfit. Se mere under Trends. Dertil kan du altid besøge vores Instagram, der løbende bliver opdateret med outfits og lækre detaljer.</p>
+			<p> Butik Strøyer ligger i Aalborg midtby, i en af de hyggeligste og ældste gader. Der er hyggelig atmosfære og unikke muligheder for shopping til alle aldre. Butik Strøyer er ejet af ægteparret Kirsten og Allan, der tilsammen startede butikken i 2006. Deres version har været at starte en tøjbutik til den stilsikre kvinde, der ønsker et stilsikkert design, men samtidig også med nogle detaljer, som gør tøjet unikt og lidt eksperimenterende. Butikken fører kendte danske mærker, der har fokus på høj kvalitet og lækkert materiale. I butikken møder du oftest den ene af indehaverne, Kirsten, som står klar til at give inspiration og gode råd, til at opnå det komplette outfit. Den samme rådgivning og inspiration får du også på denne webshop, der emmer af inspiration og gode råd til, hvordan du opnår det perfekte outfit. Se mere under Trends. Dertil kan du altid besøge vores Instagram, der løbende bliver opdateret med outfits og lækre detaljer.</p>
 			<div class="icons">
 				<a href="https://www.facebook.com/stroyeraalborg/"><img src="faceb_icon.png" alt="facebook icon"></a>
 				<a href="https://www.instagram.com/butikstroyer/?hl=da"><img src="insta_icon.png" alt="facebook icon"></a>
