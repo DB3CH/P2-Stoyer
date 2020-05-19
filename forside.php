@@ -80,7 +80,7 @@ if(!$results){
 		<div class="flexItem flexText">
 			<h2>Placeret centralt i Gravensgade</h2>
 
-			<p>Velkommen til Butik Strøyers webshop! 
+			<p>Velkommen til Butik Strøyers webshop!
 Butik Strøyer er en tøjbutik, hvor man blandt andet kan finde lækkert designertøj til kvinder, accessories, sko, samt smykker. Vi finder og udvælger løbende nye og spændende varer i og udenfor Danmark. Alle vores styles er håndplukkede, hvilket giver vores kunder rig mulighed for at sammensætte en helt unik garderobe.
 </p>
 
@@ -102,7 +102,11 @@ Butik Strøyer er en tøjbutik, hvor man blandt andet kan finde lækkert designe
 
   	?>
 
-			<div class="images"><a href="products.php?id=<?php echo $row['ID']?>"> <?php echo "<img src='billeder/". $row['billede']."'>";?><div class="imgText"><?php echo $row ['producent']." ". $row['model']?><br><?php echo $row ['pris']?></div></a></div>
+			<div class="images"><a href="products.php?id=<?php echo $row['ID']?>">
+       <?php echo "<img src='billeder/". $row['billede']."'>";?>
+       <div class="imgText"><?php echo $row ['producent']." ". $row['model']?>
+        <br><?php echo $row ['pris']?>
+      </div></a></div>
 
 
 
