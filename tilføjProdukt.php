@@ -48,7 +48,7 @@ if(!isset($_SESSION['login'])){
 
 			<div class="content">
 
-				<h2 class="page-title">Tilføj bruger</h2>
+				<h2 class="page-title">Tilføj produkt</h2>
 
 
 				<div class="form">

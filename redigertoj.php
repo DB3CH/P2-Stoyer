@@ -164,7 +164,7 @@ if(isset($_GET['id'])){
 
 			<div class="content">
 
-				<h2 class="page-title">Tilføj bruger</h2>
+				<h2 class="page-title">Rediger i <?php echo $row ['model']?></h2>
 
 
 				<div class="form">
