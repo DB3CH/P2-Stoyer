@@ -13,6 +13,8 @@ $city = htmlentities($_POST['city']);
 $land =htmlentities ($_POST['land']);
 $telefonnummer = htmlentities ($_POST['telefonnummer']);
 
+
+
  //sql kode indsætter alt data om produktet og billedenavnet ind på databasen
 $sql = "INSERT INTO ordrer (email, navn, efternavn, adresse, postnummer, city, land, telefonnummer)
 VALUES ('$email_address', '$navn', '$efternavn', '$adresse', '$postnummer', '$city', '$land', '$telefonnummer')";

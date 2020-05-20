@@ -92,7 +92,7 @@ if(isset($_GET['id'])){
 
        <form class="størrelse" action="kurv.php" method="POST">
 				 	<input class="vælg-størrelse" type="text" name="storrelse" Placeholder="Vælg Størrelse" required>
-       		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj">
+       		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj til kurv">
           <input type="hidden" name="id" value="<?php echo $id; ?>">
        </form>
 

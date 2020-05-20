@@ -139,6 +139,7 @@ if ($samletpris==0) {
    	<div class="btn-kurv-afslut"><a href="info.php">Gå til kassen</a></div>
 
   </div>
+  
 
   <?php
   if(empty($_GET['status'])){
