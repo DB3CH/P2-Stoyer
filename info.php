@@ -13,7 +13,7 @@ $pris = $_SESSION['pris'];
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="adminStyle.css">
+    <link rel="stylesheet" type="text/css" href="Style.css">
     
     <title></title>
   </head>
