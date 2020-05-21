@@ -55,7 +55,7 @@ if(!$results){
 			<h1 class="logo-text">Strøyer</h1>
 		</div>
 		<div class="nav">
-			<h1 class="logo-text">Username</h1>
+      <h1 class="logo-text" > <a class="logo-text" href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
 		</div>
 	</header>
 
@@ -65,8 +65,8 @@ if(!$results){
 			<ul>
 				<li><a href="produktOversigt.php">Produktoversigt</a></li>
 				<li><a href="ordrer.php">Igangværende ordrer</a></li>
-				<li><a href="afsluttedeOrdrer.html">Afsluttede ordrer</a></li>
-				<li><a href="#">Admin Konti</a></li>
+				<li><a href="afsluttedeOrdrer.php">Afsluttede ordrer</a></li>
+			
 			</ul>
 		</div>
 
