@@ -1,5 +1,6 @@
 <?php
 // Etablerer forbindelse til serveren
+
 require_once "connection.php";
 
 if (isset($_POST['submit'])) {
