@@ -119,7 +119,7 @@ if(!$results){
 <div class="kategori">
 
 
-  <form action='produktOversigt.php.php'>
+  <form action='produktOversigt.php'>
 
     <input class="kategori-btn" type="submit"  value="Vis alt">
 
