@@ -25,7 +25,7 @@ if(isset($_GET['id'])){
 <html>
 <head>
 	<title>Ordrer</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="adminStyle.css">
   	<meta charset="utf-8">
 </head>
 <body>
@@ -66,13 +66,22 @@ if(isset($_GET['id'])){
 			<?php echo $row['tidspunkt']; ?>
 
 
-        <?php
+      ?>
         
-        }
-       ?>
+        
+     
        <br>
-        <td><a href="afvis.php?id=<?php echo $row['id']?>" class="afvis" onclick="return confirm ('Husk at sende mail til dem')"
+            <td><a href="afvis.php?id=<?php echo $row['id']?>" class="godkend" onclick="return confirm ('Har du sendt tøjet?')"
+      >Godkend</a></td>
+      
+      <br>
+      <td><a href="afvis.php?id=<?php echo $row['id']?>" class="afvis" onclick="return confirm ('Husk at sende mail til dem')"
       >Afvis </a></td>
+       <?php
+        }
+        ?>
+      
+
 
 
 

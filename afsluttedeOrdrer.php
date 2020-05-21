@@ -22,8 +22,8 @@
 		<div class="left-sidebar">
 			<ul>
 				<li><a href="produktOversigt.php">Produktoversigt</a></li>
-				<li><a href="odrer.php">Igangværende ordrer</a></li>
-				<li><a href="afsluttedeOrdrer.html">Afsluttede ordrer</a></li>
+				<li><a href="ordrer.php">Igangværende ordrer</a></li>
+				<li><a href="afsluttedeOrdrer.php">Afsluttede ordrer</a></li>
 				
 			</ul>
 		</div>

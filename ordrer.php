@@ -122,7 +122,6 @@ if(!$results){
       <!--"rediger.php?id=<?php //echo $row['ID']?>" Gør at id'en fra databasen bliver hentet og skaber en unik url for det enkelte produkt-->
       <!-- onclick laver en advarsel der spøger om brugeren er sikker på om man vil slette -->
       <td><a href="ordrerside.php?id=<?php echo $row['id']?>" class="godkend">vis </a></td>
-      <td><a href="rediger.php?id=<?php echo $row['id']?>" class="godkend">Godkend</a></td>
      
    <?php
 
