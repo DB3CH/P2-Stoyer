@@ -82,21 +82,23 @@ if(isset($_GET['id'])){
 			<br>
 			<p><?php echo $row['beskrivelse']; ?></p>
 			<br>
-			<p>Vi har størrelse <?php echo $row['storrelse']; ?></p>
-
+			<p>Vi har størrelse <?php echo $row['storrelse']; ?> 
+			</p>
         <?php
         $id=$row['ID'];
-        }
+        
        ?>
 
 
        <form class="størrelse" action="kurv.php" method="POST">
-				 	<input class="vælg-størrelse" type="text" name="storrelse" Placeholder="Vælg Størrelse" required>
-       		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj til kurv">
+       	OBS:Hvis du bestiller en størrelse der ikke er blandt de størrelser nævnt, vil din bestilling blive annulleret.
+				 	<input class="vælg-størrelse" type="text" name="storrelse" Placeholder="Skriv størrelse" required  autocomplete="off">
+       		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj til kurv" onclick="return confirm ('Butik Strøyer har størrelse <?php echo $row['storrelse']; ?> på lager, dobbelttjek om det er en af de størrelser du har bestilt')">
           <input type="hidden" name="id" value="<?php echo $id; ?>">
-       </form>
-
-
+      </form>
+      <?php
+}
+?>
 		</div>
 
 	</div>

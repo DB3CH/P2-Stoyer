@@ -66,7 +66,7 @@ if(isset($_GET['id'])){
 			<?php echo $row['tidspunkt']; ?>
 
 
-      ?>
+      
         
         
      

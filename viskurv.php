@@ -140,6 +140,12 @@ if ($samletpris==0) {
 
   </div>
   
+    <footer>
+    <a href="https://www.facebook.com/stroyeraalborg/"><img src="faceb_icon.png" alt="facebook icon"></a>
+    <a href="https://www.instagram.com/butikstroyer/?hl=da"><img src="insta_icon.png" alt="facebook icon"></a>
+    <p>2017 STRØYER - ALL RIGHTS RESERVED</P>
+  </footer>
+
 
   <?php
   if(empty($_GET['status'])){

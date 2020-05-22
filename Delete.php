@@ -25,7 +25,7 @@ if(isset($_GET['id'])){
 
 		//hvis der bliver slettet bliver der henvist til show.php, ellers fejlmeddelelse
 		if($results){
-		header("Location: show.php");
+		header("Location: produktOversigt.php");
 		exit();
 		}else{
 			die("could not query the database" .msqli_error());
