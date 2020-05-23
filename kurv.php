@@ -20,13 +20,15 @@ require_once "connection.php";
 
 		$storrelse = $_POST['storrelse'];
 
+		$str = strtoupper($storrelse);
+
 
 
 		//indsætter idet fra de valgte produkt i databasen
     array_push($_SESSION["indkobskurv"], $id);
 
 		//indsætter idet fra de valgte produkt i databasen
-    array_push($_SESSION["storrelse"], $storrelse);
+    array_push($_SESSION["storrelse"], $str);
 
 
 
