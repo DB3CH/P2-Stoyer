@@ -176,8 +176,8 @@ if(!$results){
 
           echo '<tr <div class="table">';
 
-          echo "<td>".$row['kategori']."</td>";
-          echo "<td>".$row['producent']."</td>";
+          echo "<td class='kategori'>".$row['kategori']."</td>";
+          echo "<td class='producent'>".$row['producent']."</td>";
           echo "<td>". $row['model']."</td>";
           echo "<td>". $row['produktnummer']."</td>";
           echo "<td>"."<img src='billeder/". $row['billede']."'>"."</td>";
