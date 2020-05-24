@@ -32,7 +32,7 @@ if(isset($_GET['id'])){
 
 
 	<div class="flex-2">
-
+ <div class="admin-wrapper">
     <?php
     //While loop skriver alt informationen om produktet fra databasen
     $result = mysqli_query($connection,$query);
@@ -40,7 +40,9 @@ if(isset($_GET['id'])){
     ?>
 	<li><a href="ordrer.php">Tilbage</a></li>
 		
-		<div class="flexItem flexText">
+		<div class="flexItem">
+
+
 			Bestilling fra 
 			<?php echo $row ['navn']." ". $row['efternavn']?>
 			<br>
@@ -71,7 +73,7 @@ if(isset($_GET['id'])){
         
      
        <br>
-            <td><a href="afvis.php?id=<?php echo $row['id']?>" class="godkend" onclick="return confirm ('Har du sendt tøjet?')"
+            <td><a href="#id=<?php echo $row['id']?>" class="godkend" onclick="return confirm ('Har du sendt tøjet?')"
       >Godkend</a></td>
       
       <br>
@@ -83,7 +85,7 @@ if(isset($_GET['id'])){
       
 
 
-
+</div>
 
 		</div>
 
