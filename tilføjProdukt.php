@@ -22,6 +22,24 @@ if(!isset($_SESSION['login'])){
 </head>
 <body>
 
+	<input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Menu</header>
+      <a href="produktOversigt.php" class="active">
+        <span>Produktoversigt</span>
+      </a>
+      <a href="ordrer.php">
+        <span>Igangværende ordrer</span>
+      </a>
+      <a href="afsluttedeOrdrer.php">
+        <span>Afsluttede ordrer</span>
+      </a>
+    </div>
+
 
 	<header>
 		<div class="logo">
@@ -33,15 +51,6 @@ if(!isset($_SESSION['login'])){
 	</header>
 
 	<div class="admin-wrapper">
-
-		<div class="left-sidebar">
-			<ul>
-				<li><a href="produktOversigt.php">Produktoversigt</a></li>
-				<li><a href="index.html">Igangværende ordrer</a></li>
-				<li><a href="afsluttedeOrdrer.html">Afsluttede ordrer</a></li>
-				<li><a href="#">Admin Konti</a></li>
-			</ul>
-		</div>
 
 		<div class="admin-content">
 
