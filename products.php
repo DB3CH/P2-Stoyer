@@ -9,7 +9,7 @@ require_once 'connection.php';
 if(isset($_GET['id'])){
 
 	//id fra URL bliver sat i en variabel
-    $id=htmlentities($_GET['id']);
+	$id=htmlentities($_GET['id']);
 
   //tjekker at der er en id i variablen
 	if(!empty($id)){
@@ -17,7 +17,7 @@ if(isset($_GET['id'])){
 		$query = "SELECT * FROM produkttest WHERE id= $id ";
 
 
-    }
+	}
 }
 ?>
 
@@ -27,20 +27,20 @@ if(isset($_GET['id'])){
 	<title>Shop</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  	<meta charset="utf-8">
+	<meta charset="utf-8">
 </head>
 <body>
 	<div class="cart">
-	<a href="viskurv.php">
-		<img class="cart" src="cart.png">
-    <?php
-    if (isset($_SESSION["pris"])) {
-      echo "<p>". $_SESSION["pris"]. " kr." ."</p>";
-  }else {
-    echo "<p>"."0 kr."."</p>";
-  }
-     ?>
-	</a>
+		<a href="viskurv.php">
+			<img class="cart" src="cart.png">
+			<?php
+			if (isset($_SESSION["pris"])) {
+				echo "<p>". $_SESSION["pris"]. " kr." ."</p>";
+			}else {
+				echo "<p>"."0 kr."."</p>";
+			}
+			?>
+		</a>
 	</div>
 
 	<div class="pageNav">
@@ -50,7 +50,7 @@ if(isset($_GET['id'])){
 
 
 		<div class="pageHeader">
-		<a href="forside.php"><h1>STRØYER</h1></a>
+			<a href="forside.php"><h1>STRØYER</h1></a>
 		</div>
 
 		<ul class="pageMenu">
@@ -65,52 +65,52 @@ if(isset($_GET['id'])){
 
 	<div class="flex-2">
 
-    <?php
+		<?php
     //While loop skriver alt informationen om produktet fra databasen
-    $result = mysqli_query($connection,$query);
-    while($row = mysqli_fetch_assoc($result)){
-    ?>
+		$result = mysqli_query($connection,$query);
+		while($row = mysqli_fetch_assoc($result)){
+			?>
 
-		<div class="flexItem">
-			<?php echo "<img src='billeder/". $row['billede']."'>";?>
-		</div>
-		<div class="flexItem flexText">
-			<h3><?php echo $row ['producent']." ". $row['model']?></h3>
-			<h4><?php echo $row['pris']?> kr.</h4>
+			<div class="flexItem">
+				<?php echo "<img src='billeder/". $row['billede']."'>";?>
+			</div>
+			<div class="flexItem flexText">
+				<h3><?php echo $row ['producent']." ". $row['model']?></h3>
+				<h4><?php echo $row['pris']?> kr.</h4>
 
-			<p>Varenr: <?php echo $row['produktnummer']; ?> </p>
-			<br>
-			<p><?php echo $row['beskrivelse']; ?></p>
-			<br>
-			<p>Vi har størrelse <?php echo $row['storrelse']; ?> 
+				<p>Varenr: <?php echo $row['produktnummer']; ?> </p>
+				<br>
+				<p><?php echo $row['beskrivelse']; ?></p>
+				<br>
+				<p>Vi har størrelse <?php echo $row['storrelse']; ?> 
 			</p>
-        <?php
-        $id=$row['ID'];
-        
-       ?>
+			<?php
+			$id=$row['ID'];
+			
+			?>
 
 
-       <form class="størrelse" action="kurv.php" method="POST">
-       	<b>OBS:</b> <i>Bestiller du en størrelse der ikke er blandt de nævnte størrelser, vil din ordre blive annulleret.</i>
-				 	<input class="vælg-størrelse" type="text" name="storrelse" Placeholder="Skriv størrelse.." required  autocomplete="off">
-       		<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj til kurv" onclick="return confirm ('Butik Strøyer har størrelse <?php echo $row['storrelse']; ?> på lager, dobbelttjek om det er en af de størrelser du har bestilt')">
-          <input type="hidden" name="id" value="<?php echo $id; ?>">
-      </form>
-      <?php
-}
-?>
-		</div>
-
+			<form class="størrelse" action="kurv.php" method="POST">
+				<b>OBS:</b> <i>Bestiller du en størrelse der ikke er blandt de nævnte størrelser, vil din ordre blive annulleret.</i>
+				<input class="vælg-størrelse" type="text" name="storrelse" Placeholder="Skriv størrelse.." required  autocomplete="off">
+				<input class="btnProducts"type="submit" name="tilfoej" value="Tilføj til kurv" onclick="return confirm ('Butik Strøyer har størrelse <?php echo $row['storrelse']; ?> på lager, dobbelttjek om det er en af de størrelser du har bestilt')">
+				<input type="hidden" name="id" value="<?php echo $id; ?>">
+			</form>
+			<?php
+		}
+		?>
 	</div>
 
-	<footer>
-		<a href="https://www.facebook.com/stroyeraalborg/"><img src="faceb_icon.png" alt="facebook icon"></a>
-		<a href="https://www.instagram.com/butikstroyer/?hl=da"><img src="insta_icon.png" alt="facebook icon"></a>
-		<p>2017 STRØYER - ALL RIGHTS RESERVED</P>
+</div>
+
+<footer>
+	<a href="https://www.facebook.com/stroyeraalborg/"><img src="faceb_icon.png" alt="facebook icon"></a>
+	<a href="https://www.instagram.com/butikstroyer/?hl=da"><img src="insta_icon.png" alt="facebook icon"></a>
+	<p>2017 STRØYER - ALL RIGHTS RESERVED</P>
 	</footer>
 
 </body>
 <?php
 mysqli_close($connection);
- ?>
+?>
 </html>

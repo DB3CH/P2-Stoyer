@@ -5,27 +5,27 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="adminStyle.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 
 	<input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <header>Menu</header>
-      <a href="produktOversigt.php" class="active">
-        <span>Produktoversigt</span>
-      </a>
-      <a href="ordrer.php">
-        <span>Igangværende ordrer</span>
-      </a>
-      <a href="afsluttedeOrdrer.php">
-        <span>Afsluttede ordrer</span>
-      </a>
-    </div>
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+	<div class="sidebar">
+		<header>Menu</header>
+		<a href="produktOversigt.php" class="active">
+			<span>Produktoversigt</span>
+		</a>
+		<a href="ordrer.php">
+			<span>Igangværende ordrer</span>
+		</a>
+		<a href="afsluttedeOrdrer.php">
+			<span>Afsluttede ordrer</span>
+		</a>
+	</div>
 
 
 	<header>

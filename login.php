@@ -42,29 +42,29 @@ if(isset($_POST['but_submit'])){
 <html lang="en">
 <head>
 
-<link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <link rel="stylesheet" type="text/css" href="loginstyle.css">
 </head>
 <body>
-<div class="login-page">
-    <div class="form">
-        <h2>Log In</h2>
-    <form method="post" action="" class="loginform">
-        
-        <div class="brugernavn">
-            <label for="brugernavn">Brugernavn</label>
-            <input type="text" class="textbox" id="uname" name="uname" placeholder="Brugernavn"/>
-            </div>
-            <div class="pass">
-                <label for="pass">Password</label>
-                <input type="password" class="textbox" id="txt_uname" name="pwd" placeholder="Password"/>
-            </div>
-            <div class="btn">
-                <input type="submit" value="Log ind" name="but_submit" id="but_submit" />
-            </div>
-        
-    </form>
-</div>
-</div>
+    <div class="login-page">
+        <div class="form">
+            <h2>Log In</h2>
+            <form method="post" action="" class="loginform">
+                
+                <div class="brugernavn">
+                    <label for="brugernavn">Brugernavn</label>
+                    <input type="text" class="textbox" id="uname" name="uname" placeholder="Brugernavn"/>
+                </div>
+                <div class="pass">
+                    <label for="pass">Password</label>
+                    <input type="password" class="textbox" id="txt_uname" name="pwd" placeholder="Password"/>
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Log ind" name="but_submit" id="but_submit" />
+                </div>
+                
+            </form>
+        </div>
+    </div>
 
 
 
@@ -74,4 +74,4 @@ if(isset($_POST['but_submit'])){
 <?php
 //Lukker forbindelsen til databasen
 mysqli_close($connection);
- ?>
+?>

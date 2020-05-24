@@ -5,8 +5,8 @@ require_once "connection.php";
 
 if (isset($_POST['register'])) {
   //Tager informationen fra formen og sætter den i variabler, HTMLentities sørger for at det ikke er skrevet kode i formen.
-    $username = ($_POST['username']);
-    $kode = ($_POST['password']);
+  $username = ($_POST['username']);
+  $kode = ($_POST['password']);
 
 
   //Sætter sql query til at indsætte data i en variabel
@@ -16,46 +16,46 @@ if (isset($_POST['register'])) {
 
   //if staement viser om dataen er skrevet eller om der er en error
   if (mysqli_query($connection, $sql)) {
-      echo "New record created successfully";
+    echo "New record created successfully";
   } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+    echo "Error: " . $sql . "<br>" . mysqli_error($connection);
   }
 
   //header sender brugeren videre til show.php
   header("location: show.php");
 }
 
- ?>
+?>
 
 
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Tilføj admin</title>
+  <meta charset="utf-8">
+  <title>Tilføj admin</title>
 
 </head>
 
 <body>
 
 
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" name="signup-form">
+  <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" name="signup-form">
     <div class="form-element">
-        <label>Username</label>
-        <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+      <label>Username</label>
+      <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
     </div>
 
     <div class="form-element">
-        <label>Password</label>
-        <input type="text" name="password" required />
+      <label>Password</label>
+      <input type="text" name="password" required />
     </div>
     <button type="submit" name="register" value="register">Register</button>
-</form>
+  </form>
 
 
-<footer>
-	<a href="show.html">back</a>
-</footer>
+  <footer>
+   <a href="show.html">back</a>
+ </footer>
 </body>
 </html>
 
