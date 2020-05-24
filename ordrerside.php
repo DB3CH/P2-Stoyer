@@ -18,6 +18,8 @@ if(isset($_GET['id'])){
 
 
     }
+}else {
+  echo "felj";
 }
 ?>
 
@@ -39,9 +41,9 @@ if(isset($_GET['id'])){
     while($row = mysqli_fetch_assoc($result)){
     ?>
 	<li><a href="ordrer.php">Tilbage</a></li>
-		
+
 		<div class="flexItem flexText">
-			Bestilling fra 
+			Bestilling fra
 			<?php echo $row ['navn']." ". $row['efternavn']?>
 			<br>
 			Adresse:
@@ -66,21 +68,21 @@ if(isset($_GET['id'])){
 			<?php echo $row['tidspunkt']; ?>
 
 
-      
-        
-        
-     
+
+
+
+
        <br>
             <td><a href="afvis.php?id=<?php echo $row['id']?>" class="godkend" onclick="return confirm ('Har du sendt tøjet?')"
       >Godkend</a></td>
-      
+
       <br>
       <td><a href="afvis.php?id=<?php echo $row['id']?>" class="afvis" onclick="return confirm ('Husk at sende mail til dem')"
       >Afvis </a></td>
        <?php
         }
         ?>
-      
+
 
 
 
@@ -89,7 +91,7 @@ if(isset($_GET['id'])){
 
 	</div>
 
-	
+
 
 </body>
 <?php

@@ -1,6 +1,6 @@
 <?php
+session_start();
 // Etablerer forbindelse til serveren
-
 require_once "connection.php";
 
 if (isset($_POST['submit'])) {
@@ -14,6 +14,9 @@ $city = htmlentities($_POST['city']);
 $land =htmlentities ($_POST['land']);
 $telefonnummer = htmlentities ($_POST['telefonnummer']);
 
+unset($_SESSION["indkobskurv"]);
+unset($_SESSION["storrelse"]);
+unset($_SESSION["pris"]);
 
 
  //sql kode indsætter alt data om produktet og billedenavnet ind på databasen
@@ -23,7 +26,9 @@ VALUES ('$email_address', '$navn', '$efternavn', '$adresse', '$postnummer', '$ci
           echo "New record created successfully";
           mysqli_close($connection);
 
-          header("location: forside.php?uploadsuccess");
+
+
+          header("location: forside.php?status=uploadsuccess");
       } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($connection);
 
