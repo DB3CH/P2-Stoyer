@@ -16,26 +16,28 @@ if (!isset($_SESSION["storrelse"])) {
 require_once "connection.php";
 
 		//henter id fra det produkt man har valgt
-    $id = $_POST['id'];
+$id = $_POST['id'];
 
-		$storrelse = $_POST['storrelse'];
+$storrelse = $_POST['storrelse'];
+
+$str = strtoupper($storrelse);
 
 
 
 		//indsætter idet fra de valgte produkt i databasen
-    array_push($_SESSION["indkobskurv"], $id);
+array_push($_SESSION["indkobskurv"], $id);
 
 		//indsætter idet fra de valgte produkt i databasen
-    array_push($_SESSION["storrelse"], $storrelse);
+array_push($_SESSION["storrelse"], $str);
 
 
 
 
 		//henviser tilbage til webshoppen
-  header("location: viskurv.php");
+header("location: viskurv.php");
 
- ?>
+?>
 
- <?php
- mysqli_close($connection);
-  ?>
+<?php
+mysqli_close($connection);
+?>
