@@ -27,9 +27,9 @@ session_start();
 			?>
 		</a>
 	</div>
-	
+
 	<div class="pageNav">
-		
+
 		<label for="toggle">&#9776;</label>
 		<input type="checkbox" id="toggle">
 
@@ -45,7 +45,7 @@ session_start();
 			<li><a href="contact.php">Kontakt</a></li>
 		</ul>
 		<hr class="navLinePage">
-		
+
 	</div>
 
 	<div class="flex-2">
@@ -61,20 +61,21 @@ session_start();
 			<p>Torsdag 10 - 17:30</p>
 			<p>Fredag 10 - 17:30</p>
 			<p>Lørdag 10 - 17:30</p>
-			
+
 		</div>
 
 		<div class="flexItem">
 			<h3>Send os en besked</h3>
 
 			<form action="forside.php">
-				<input type="text" id="fname" name="firstname" placeholder="Fornavn:" required="true">
-
-				<input type="text" id="lname" name="lastname" placeholder="Efternavn:" required="true">
 
 				<input type="text" id="email" name="email" placeholder="Email:" required="true">
 
-				
+				<input type="text" id="emne" name="emne" placeholder="Emne:" required="true">
+
+
+
+
 
 				<textarea class="text-area" id="subject" name="subject" placeholder="Skriv besked her:"></textarea>
 
@@ -83,7 +84,7 @@ session_start();
 		</div>
 
 	</div>
-	
+
 
 	<footer>
 		<a href="https://www.facebook.com/stroyeraalborg/"><img src="faceb_icon.png" alt="facebook icon"></a>
