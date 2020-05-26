@@ -44,7 +44,7 @@ if(!isset($_SESSION['login'])){
 
   <header>
     <div class="logo">
-     <h1 class="logo-text">Strøyer</h1>
+    
    </div>
    <div class="nav">
      <h1 class="logo-text"> <a class="logo-text" href="logud.php" onclick="return confirm ('Er du sikker på at du vil logge ud?')">Log ud</a></h1>
@@ -83,7 +83,7 @@ if(!isset($_SESSION['login'])){
         <label>Model:</label>
         <input type="text" id="model" name="model" required>
         <Label>Størrelse:</Label>
-        <input type="text" id="storrelse" name="storrelse" placeholder="Vi har størrelse..." required>
+        <input type="text" id="storrelse" name="storrelse" required>
         <Label>Beskrivelse:</Label>
         <input type="text" id="beskrivelse" name="beskrivelse">
         <label>Indsæt billede:</label>
