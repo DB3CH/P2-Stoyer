@@ -78,38 +78,38 @@ session_start();
         $query = "SELECT * FROM produkttest WHERE id= $id ";
         $result = mysqli_query($connection,$query);
 
-        while($row = mysqli_fetch_assoc($result)){
+	        while($row = mysqli_fetch_assoc($result)){
 
 
 
-  //<!-- Product #1 -->
-         echo "<div class='item'>";
+	  //<!-- Product #1 -->
+	         echo "<div class='item'>";
 
-         echo "<div class='image'>";
-         echo "<img src='billeder/" .  $row['billede'] . "'>";
-         echo "</div>";
+	         echo "<div class='image'>";
+	         echo "<img src='billeder/" .  $row['billede'] . "'>";
+	         echo "</div>";
 
-         echo "<div class='description'>";
-         echo "<span>" . $row['producent'] . "</span>";
-         echo "<span>" . $row['model'] . "</span>";
-         echo "<span>" . $storrelser[$key] . "</span>";
-         echo "</div>";
+	         echo "<div class='description'>";
+	         echo "<span>" . $row['producent'] . "</span>";
+	         echo "<span>" . $row['model'] . "</span>";
+	         echo "<span>" . $storrelser[$key] . "</span>";
+	         echo "</div>";
 
-         $samletpris += $row['pris'];
-
-
-         echo "<div class='price'>" . $row['pris'] . "</div>";
+	         $samletpris += $row['pris'];
 
 
-       }
+	         echo "<div class='price'>" . $row['pris'] . "</div>";
 
 
-       echo "<a class='btn-kurv' href=fjernfrakurv.php?key=".$key."> Slet </a>";
-       echo "</div>";
+	       }
+
+
+	       echo "<a class='btn-kurv' href=fjernfrakurv.php?key=".$key."> Slet </a>";
+	       echo "</div>";
 
 
 
-     }
+	     }
    }
  }else {
 //hvis der ikke er nogle produkter i kurven

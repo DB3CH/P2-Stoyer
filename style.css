@@ -226,8 +226,8 @@ p{
 
 
 .heroContent{
-	margin: 30vh 0 0 15%;
-	
+	margin: 10vh 0 0 15%;
+
 }
 
 .heroContent p{
@@ -492,7 +492,7 @@ label{
 	opacity: 0.5;
 }
 
-.shopSection{ 
+.shopSection{
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 50px;
@@ -652,14 +652,14 @@ form{
   font-size: 35px;
   font-weight: 400;
 }
- 
+
 .item {
   padding: 20px 30px;
   height: 120px;
   display: flex;
   border-bottom: 1px solid #E1E8EE;
 }
- 
+
 
 .image {
   margin-right: 50px;
@@ -671,21 +671,21 @@ form{
 	height: auto;
 	position: relative;
 }
- 
+
 
 .description {
   padding-top: 10px;
   margin-right: 60px;
   width: 115px;
 }
- 
+
 .description span {
   display: block;
   font-size: 14px;
   color: #43484D;
   font-weight: 400;
 }
- 
+
 
 
 
@@ -991,7 +991,7 @@ input[type=number], select {
   	width: 100%;
   	margin-left: 0;
   }
-  
+
 
 
 	#toggle:checked ~ .menu{
